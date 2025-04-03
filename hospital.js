@@ -105,6 +105,11 @@ const gameData = {
                     gameData.corridor.commands["examine windows"].action = function () {
                         document.getElementById('topimg').src="art/closedwindow.png";
                     };
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
                 }
             },
             'go to corridor': { 
@@ -131,7 +136,14 @@ const gameData = {
         description: `You point your flashlight towards the ghost causing it to quickly dissipate. A strong gust of wind envelops you, you shut your eyes and hold your breath,
         bracing for an impact that never comes. Instead you hear the <span style="font-weight: bold;">DOOR</span> creak behind you.`,
         commands: {
-        'look': `The ghost has left and is no longer in the hospital, leaving the door behind you slightly ajar.`,
+        'look': {output: `The ghost has left and is no longer in the hospital, leaving the door behind you slightly ajar.`,
+            action: function() {
+                setTimeout(() => {
+                    document.querySelectorAll('#textoutput span').forEach(span => {
+                        span.style.color = "white";
+                    });
+                }, 0);
+            }},
         'examine door': {output: `You turn towards the door and notice that it's now slightly ajar. Rather than fear, you're filled with curiosity and remorse.
             You've crossed paths with this lost soul before. You just know it. You know them like a name on the tip of your tongue. It's beckoning you to follow...
             <i>you should leave the hospital...</i>`,
