@@ -77,7 +77,7 @@ function handleDialogue() {
             } else if (currentLine.startsWith("Office:")) {
                 style = "color: white; font-style: italic;";
             } else if (currentLine.startsWith("?")) { 
-                style = "color: gray; font-size: 10pt; animation: glitch 0.2s infinite alternate;";
+                style = "color: gray; font-size: 10pt; animation: glitch 0.5s infinite alternate;";
             }
         
             textContainer.innerHTML += `<p style="${style}">${currentLine}</p>`;

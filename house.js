@@ -8,7 +8,7 @@ const gameData = {
                         You don't know how long it's been going for. After a long day at the hospital you always seem to find yourself dozing off…but you're never truly off the clock 
                         with these late-night calls. You pick yourself up from the cushioned <span style="color: white; font-weight: bold;">BENCH</span> and stretch your arms and neck. You feel a deep ache in your back as you hear bones crack…
                         God you're getting old. You turn back around, groping the <span style="color: white; font-weight: bold;">BENCH</span> to find your <span style="color: white; font-weight: bold;">GLASSES</span>
-                         when you realize it must have fallen to the <span style="color: white; font-weight: bold;">FLOOR</span>.`
+                         when you realize it must have fallen to the <span style="color: white; font-weight: bold;">FLOOR</span>. You should <i> pick up </i> your glasses.`
                      },
 
             'go north': { output: `You can not move north from here.`},
@@ -36,7 +36,8 @@ const gameData = {
                         that you and your friends hunted last year standing proudly on display by the box <span style="color: white; font-weight: bold;">TELEVISION</span> set. 
                         Next to it is a lone black rotary <span style="color: white; font-weight: bold;">TELEPHONE</span>. Despite the strict water and electricity schedule throughout the 
                         entire village, being one of the only specialized doctors gives you the perk of being abruptly woken up in the middle of the night by the blaring noise 
-                        in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight.`
+                        in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight. The bedrooms are to the <i> east </i> 
+                        while the dining room and kitchen are to the <i> west </i> of here.`
                     },
 
             'pick up telephone': { output: `You carefully place the telephone back down...taken aback by the strange call. You should leave the house to check it out.`},
