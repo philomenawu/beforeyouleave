@@ -2,7 +2,8 @@
 const gameData = {
     start: {
         description: `You arrive at the hospital. It's a rather small building and about a 30 minute walk up the mountain from your house.
-        After back and forth negotiations with government officials over several months, you still take pride in finally convincing them to approve its construction.`,
+        After back and forth negotiations with government officials over several months, you still take pride in finally having convinced them to approve its construction.
+        You should <i>enter</i> the hospital to investigate the strange call.`,
         commands: {
             'look': { output: `The building is long and narrow. Overgrown thickets crawl up the sides of the building and cover the hospital sign. The place is illuminated
                 only by your flashlight and the moon. <i> You should go inside and check if anything is off... </i>`},
