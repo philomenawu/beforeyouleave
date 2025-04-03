@@ -34,7 +34,7 @@
         .about {
             flex: 1; /* Makes them equally sized */
             margin-top: 80px;
-            height: 50vh;
+            height: 45vh;
             overflow-y: scroll;
             text-align: left;
             font-family: "Alice", serif;
@@ -45,6 +45,10 @@
             background: rgba(255, 255, 255); /* Optional: Adds a background for readability */
             border-radius: 10px; /* Optional: Rounds the corners */
             text-align: center;
+            /* display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; */
         }
         
         /* Scrollbar styling */
@@ -111,8 +115,17 @@
             padding: 15px;
         }
 
+        .text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centers content vertically */
+            height: 100%; /* Ensures it takes the full height of the parent */
+        }
+
         img {
             margin-top: 25%;
+            width: 15%;
+            height: auto;
         }
     </style>
     <body>
@@ -123,6 +136,7 @@
         <div class="about-container">
             <div class="about">
                 <h3>Text-Based Interaction</h3>
+                <div class="text">
                 <p style="text-align: center;">Type short 2-3 word commands and press the enter key.<br></p>
                 <p style="text-align: center;">Commands may include:</p>
                 <li style="text-align: left; margin-left: 30%;">go north</li>
@@ -135,15 +149,18 @@
                 <li style="text-align: left; margin-left: 30%;"> pick up ___</li>
                 <br><br>
                 <p>Words that are bolded and capitalized may be interacted with and used in a command.</p>
+                </div>
             </div>
             <div class="about">
                 <h3>Keyboard Navigation</h3>
+                <br>
                 <img src="art/player.png">
                 <br><br><br><br><br>
                 <p>Use the up, right, down, and left arrow keys<br> of the keyboard to move the character across the screen.</p>
             </div>
             <div class="about">
                 <h3>Player Book</h3>
+                <div class="text">
                 <p style="align-items: center; justify-content: center;">
                 This game is meant to be played using both the desktop and the book provided.<br><br>
                 Draw or write in the book when prompted by the game.<br><br>
@@ -151,6 +168,7 @@
                 before continuing the game.<br><br>
                 After completing the game, you may either take the book with you, or leave it
                 behnd for others to enjoy.</p>
+                </div>
             </div>
         </div>
         <br>
