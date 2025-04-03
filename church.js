@@ -159,7 +159,7 @@ const gameData = {
                 }, 0);
             }
             },
-            'examine ghost': {output: `The ghost is facing away from you. It seems to fade in and out. You wonder if it has a name you can pray for.`,
+            'examine ghost': {output: `The ghost is facing away from you. It seems to fade in and out. You wonder if it has a name you can <i>pray</i> for.`,
                 action: function () {
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
