@@ -37,7 +37,7 @@ const gameData = {
                         Next to it is a lone black rotary <span style="color: white; font-weight: bold;">TELEPHONE</span>. Despite the strict water and electricity schedule throughout the 
                         entire village, being one of the only specialized doctors gives you the perk of being abruptly woken up in the middle of the night by the blaring noise 
                         in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight. The bedrooms are to the <i> east </i> 
-                        while the dining room and kitchen are to the <i> west </i> of here.`
+                        while the dining room and kitchen are to the <i> west </i> of here. Stairs lead down to the shop.`
                     },
 
             'pick up telephone': { output: `You carefully place the telephone back down...taken aback by the strange call. You should leave the house to check it out.`},
@@ -74,7 +74,7 @@ const gameData = {
     bedroom: {
         description: `Your <span style="color: white; font-weight: bold;">WIFE</span> is asleep on the bed. The pale light of the moon through the slits of the window shutters casts a soft glow on her face. 
         Despite the two decades together, she doesn't seem to have aged since the two of you first met. You don't know how she manages it all- running the shop downstairs 
-        while taking care of the three little runts all asleep in the bedroom farther <i>east</i> down the hallway.`,
+        while taking care of the three little runts all asleep in the bedroom farther <i>east</i> down the hallway. The living room is back <i>west</i>.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
@@ -135,14 +135,14 @@ const gameData = {
 
     children: {
         description: `All three <span style="color: white; font-weight: bold;">CHILDREN</span> share a bedroom at the end of the hallway. A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of their beds, 
-        giving a view of the mountainous village. The full moon can be seen clearly
-        from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.`,
+        giving a view of the mountainous village. The full moon can be seen clearly from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.
+        The master bedroom is back <i>east</i>.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
-            'go south': { output: `You can not move south from here.`},
+            'go south': { output: `You can not move south from here. The stairs to go down are back in the living room.`},
 
-            'go east': { output: `You can not move east from here.`},
+            'go east': { output: `You've reached the end of the hallway and can not move farther east from here.`},
 
             'go west': { nextRoom: 'bedroom', output: `You move west and walk into your bedroom.`},
 
@@ -171,11 +171,12 @@ const gameData = {
     diningroom: {
         description: `At night, the dining room serves as a study space for your children. With the rolling blackouts throughout the village, you usually find them studying by 
         candlelight. The table is cluttered with crumpled up homework sheets and dull pencils. Wax drippings cover the surrounding surface. Despite how many times you and your 
-        wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn. The kitchen is farther <i>west</i> down the hallway.`,
+        wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn. The kitchen is farther <i>west</i> down the hallway. 
+        The living room and bedrooms are to the <i>east</i>`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
-            'go south': { output: `You can not move south from here.`}, 
+            'go south': { output: `You can not move south from here. The stairs to go down are back in the living room.`}, 
 
             'go east': { nextRoom: 'start', output: `You move east and walk into the living room.` },
 
@@ -196,16 +197,17 @@ const gameData = {
         <span style="color: white; font-weight: bold;">LISTS</span>. A window across the room is left slightly ajar to 
         air out the charcoal scent from cooking. The shelves in the back are stocked with produce. Next to them is a closed wooden <span style="color: white; font-weight: bold;">CABINET</span>.
         You hear the sound of paws walking towards you with heavy panting. <span style="color: white; font-weight: bold;">TOMMY</span>, your labrador retriever, and 
-        <span style="color: white; font-weight: bold;">JACKIE</span>, your german shepherd, poke their head around the caged off corner of the kitchen.`,
+        <span style="color: white; font-weight: bold;">JACKIE</span>, your german shepherd, poke their head around the caged off corner of the kitchen. The dining room and
+        living room are back <i>west</i>.`,
 
         commands: {
             'go north': { output: `You can not move north from here.`},
 
-            'go south': { output: `You can not move south from here.`},
+            'go south': { output: `You can not move south from here. The stairs to go down are back in the living room.`},
 
             'go east': { nextRoom: 'diningroom', output: `You move east and walk into the dining room.`},
 
-            'go west': { output: `You can not move west from here.`},
+            'go west': { output: `You've reached the end of the hallway and can not move farther west from here.`},
 
             'look': { 
                         output: `The kitchen countertops are just as cluttered with <span style="color: white; font-weight: bold;">RECIPE</span> notes and scribbled grocery 
