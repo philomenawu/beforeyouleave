@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9397ecdef.js" crossorigin="anonymous"></script>
+    <title>Before you leave...</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Bentham&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Micro+5&family=Nothing+You+Could+Do&family=Pangolin&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Schoolbell&family=Shadows+Into+Light&family=Silkscreen:wght@400;700&family=Single+Day&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            overflow-y: hidden;
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;    
+            /* font-family: "Bentham", serif;
+            font-weight: 400;
+            font-style: normal; */
+            font-family: "Alice", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 11pt;
+            /* transition (https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/) */
+            animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            position: relative;
+            margin-top: 0px;
+            padding: 10px;
+            margin-bottom: 30px;
+            width: auto;
+            max-width: 50%;
+            white-space: normal;
+            background-color: white;
+        }
+        .typewriter p {
+            overflow-x: hidden; 
+            white-space: nowrap;
+            border-right: .15em solid rgb(0, 0, 0); 
+            display: inline-block;
+            word-break: break-word;
+            margin: 0 auto;
+            animation: 
+            typing 10s steps(85, end),
+            blink-caret .75s step-end infinite;
+            font-size: 12pt;
+            font-style: italic;
+            color: black;
+            max-width: 100%;
+        }
+        /* The typing effect */
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+ 
+        /* Hide arrow buttons by default */
+        .direction-buttons {
+            display: none;
+        }
+
+        /* Show them only on mobile screens */
+        @media (max-width: 768px) {
+            .direction-buttons {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-gap: 10px;
+                padding-top: 40px;
+            }
+        }
+
+        /* Vertically center the Left and Right buttons */
+        .left-button, .right-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Up and Down buttons stacked in the center column */
+        .up-down-buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Style for the buttons */
+        button {
+            all: unset;
+            color: rgb(255, 255, 255);
+            float: right;
+            /* font-size: 28px;
+            font-weight: bold; */
+            background-color: transparent
+            /* border: 1px solid black; */
+        }
+        /* button:hover {
+            color: black;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: white;
+            border: black 1px solid;
+        }
+        button.active {
+            background-color: white;
+            color: black;
+        } */
+
+        button img {
+            width: 35px;  /* Adjust this to make the button image smaller or larger */
+            height: 35px;  /* Adjust this as needed */
+        }
+
+        #canvas-container1 {
+            position: relative;
+            width: 55vw;
+            height: 55vw;
+            max-width: 55vh;
+            max-height: 55vh;
+            background-image: url('art/lakebefore.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        #myCanvas {
+            height: 100%;
+            width: 100%;
+            border-left: 2px solid white;
+            border-right: 2px solid white;
+            border-top: 2px solid white;
+            overflow-y: auto;
+        }
+        img {
+            width: 15%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Instructions -->
+    <div id="menu-container">
+        <div id="instructions">
+            <span class="menuclose-btn">&times;</span>
+            <h2>Game Instructions</h2>
+            <ul>
+                <p> > Use the arrow key buttons to navigate down the mountain.</p>
+            </ul>
+        </div>
+    </div>
+    <button id="menu-button">?</button>
+    <div class="container">
+        <div class="typewriter">
+            <p><span>Your mother would always ask you why you chose to come back to this little village...</span></p>
+        </div>
+    </div>
+        <div id="canvas-container1">
+            <canvas id="myCanvas" width="650" height="650"></canvas> 
+        </div>
+    </div>
+    <div class="direction-buttons">
+        <!-- Left button vertically centered -->
+        <div class="left-button">
+            <button id="left-button"> <img id="right-button" src="art/leftbutton.png"></i></button>
+        </div>
+        
+        <!-- Up and Down buttons stacked vertically in the center column -->
+        <div class="up-down-buttons">
+            <button id="up-button"> <img id="right-button" src="art/upbutton.png"></button>
+            <button id="down-button"> <img id="right-button" src="art/downbutton.png"></i></button>
+        </div>
+        
+        <!-- Right button vertically centered -->
+        <div class="right-button">
+            <button id="right-button"><img id="right-button" src="art/nextbuton.png"></button>
+        </div>
+    </div>
+    <!-- <div id="noise-container">
+        <div id="noise"></div>
+    </div> -->
+    <script src="lake.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9397ecdef.js" crossorigin="anonymous"></script>
+    <title>Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Bentham&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Micro+5&family=Nothing+You+Could+Do&family=Pangolin&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Schoolbell&family=Shadows+Into+Light&family=Silkscreen:wght@400;700&family=Single+Day&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            /* overflow-y: hidden; */
+            align-items: center;
+            justify-content: center;
+            background-repeat: no-repeat;    
+            /* font-family: "Bentham", serif;
+            font-weight: 400;
+            font-style: normal; */
+            font-family: "Alice", serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 11pt;
+            /* transition (https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/) */
+            animation: fadeInAnimation ease 5s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            align-items: center;
+            justify-content: flex-start;
+            gap: 20px;
+            position: relative;
+            margin-top: 80px;
+            padding: 10px;
+            margin-bottom: 30px;
+            width: auto;
+            max-width: 50%;
+            white-space: normal;
+            /* background-color: white; */
+        }
+
+        /* Style for the buttons */
+        button {
+            color: rgb(0, 0, 0);
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: rgb(255, 255, 255);
+        }
+        button:hover {
+            color: black;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            background-color: white;
+        }
+        button.active {
+            background-color: white;
+            color: black;
+        }
+
+        #canvas-container1 {
+            position: relative;
+            width: 60vw;
+            height: 30vw;
+            max-width: 60vh;
+            max-height: 30vh;
+            background-size: cover;
+            background-position: center;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* border: 2px solid rgb(0, 0, 0); */
+        }
+        
+        #topimg {
+            width: 100%;
+            height: 100%;
+        }
+
+        #lakecontainer {
+            height: 35vh;
+            width: 35vw;
+            padding: 20px;
+            /* background-color: #ffffff; */
+            /* border: 2px solid rgb(0, 0, 0); */
+            overflow-y: hidden;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 769px) {
+            #lakecontainer {
+                height: 30vh;
+                width: 45vw;
+                padding: 20px;
+                /* background-color: #ffffff;
+                border: 2px solid white; */
+                overflow-y: auto;
+            }
+        }
+
+        #textoutput {
+            height: 35vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            /* overflow-x: none; */
+            margin-bottom: 20px;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            line-height: 1.5;
+            /* border: 2px solid red; */
+        }
+
+        #textoutput > :first-child {
+            margin-top: auto !important;
+        }
+
+
+        #inputcontainer {
+            display: flex;
+            align-items: center;
+        }
+
+        #prompt {
+            color: rgb(37, 74, 194);
+            margin-right: 10px;
+        }
+
+        #inputwrapper {
+            display: inline-block;
+            border: none;
+        }
+
+        #userinput {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            color: rgb(0, 0, 0);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 4px; /* Width of the scrollbar */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent; /* Light transparent background */
+        }
+
+        /* Thumb */
+        ::-webkit-scrollbar-thumb {
+            background: transparent; /* White thumb */
+            border-radius: 10px;
+            border: 1px solid rgb(0, 0, 0); /* Matches your body bg */
+        }
+
+        /* Thumb hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(255, 255, 255); /* Accent color */
+        }
+    </style>
+</head>
+<body>
+    <!-- Instructions -->
+    <div id="menu-container">
+        <div id="instructions">
+            <span class="menuclose-btn">&times;</span>
+            <h2>Game Instructions</h2>
+            <ul>
+                <p> > Use the arrow key buttons to navigate down the mountain.</p>
+            </ul>
+        </div>
+    </div>
+    <button id="menu-button">?</button>
+    <div id="canvas-container1">
+        <img id="topimg" src="art/church.png">
+    </div>
+    <br>
+    <div id="lakecontainer">
+        <div id="textoutput"></div>
+        <div id="inputcontainer">
+            <span id="prompt">What would you like to do?</span>
+            <span id="inputwrapper">
+                <input type="text" id="userinput" autocomplete="off" autofocus="autofocus"/>
+            </span>
+        </div>
+    </div>
+    <script src="church.js"></script>
+    <script src="lakeparser.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>
