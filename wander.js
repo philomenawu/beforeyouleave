@@ -2,7 +2,7 @@ let canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 
 let x = canvas.width - 300;
-let y = 550;
+let y = 545;
 
 let background = new Image();
 background.src = 'art/wander.png';
