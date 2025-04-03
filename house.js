@@ -172,7 +172,7 @@ const gameData = {
         description: `At night, the dining room serves as a study space for your children. With the rolling blackouts throughout the village, you usually find them studying by 
         candlelight. The table is cluttered with crumpled up homework sheets and dull pencils. Wax drippings cover the surrounding surface. Despite how many times you and your 
         wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn. The kitchen is farther <i>west</i> down the hallway. 
-        The living room and bedrooms are to the <i>east</i>`,
+        The living room and bedrooms are to the <i>east</i>.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
