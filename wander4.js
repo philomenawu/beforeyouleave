@@ -7,20 +7,20 @@ let y = 450;
 let background = new Image();
 background.src = 'art/wander.png';
 
-let hospitalBackground = new Image();
-hospitalBackground.src = 'art/hospitalonly.png'; 
+// let hospitalBackground = new Image();
+// hospitalBackground.src = 'art/hospitalonly.png'; 
 
-let churchBackground = new Image();
-churchBackground.src = 'art/churchonly.png';
+// let churchBackground = new Image();
+// churchBackground.src = 'art/churchonly.png';
 
-let tigerBackground = new Image();
-tigerBackground.src = 'art/tigeronly.png';
+// let tigerBackground = new Image();
+// tigerBackground.src = 'art/tigeronly.png';
 
 let lakeBackground = new Image();
 lakeBackground.src = 'art/lakeonly.png';
 
-let pagodaBackground = new Image();
-pagodaBackground.src = 'art/pagodaonly.png';
+// let pagodaBackground = new Image();
+// pagodaBackground.src = 'art/pagodaonly.png';
 
 let character = new Image();
 character.src = 'art/player.png';
@@ -34,27 +34,27 @@ let actionButton = document.getElementById("actionButton");
 function updateButton() {
     actionButton.style.display = "none";
 
-    if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
-        actionButton.innerText = "Explore Hospital";
-        actionButton.style.display = "block";
-        actionButtonLink.href = "hospital.html";
-    } 
-    else if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
-        actionButton.innerText = "Explore Pagoda";
-        actionButton.style.display = "block";
-        actionButtonLink.href = "pagodabefore.html";
-    } 
-    else if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
-        actionButton.innerText = "Explore Church";
-        actionButton.style.display = "block";
-        actionButtonLink.href = "church.html";
-    }
-    else if (x < 500 && y < 1000 && y > 500) {
-        actionButton.innerText = "Explore Hunting Ground";
-        actionButton.style.display = "block";
-        actionButtonLink.href = "hunting.html";
-    }
-    else if (x < 500 && y < 2000 && y > 1000) {
+    // if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
+    //     actionButton.innerText = "Explore Hospital";
+    //     actionButton.style.display = "block";
+    //     actionButtonLink.href = "hospital.html";
+    // } 
+    // else if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
+    //     actionButton.innerText = "Explore Pagoda";
+    //     actionButton.style.display = "block";
+    //     actionButtonLink.href = "pagodabefore.html";
+    // } 
+    // else if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
+    //     actionButton.innerText = "Explore Church";
+    //     actionButton.style.display = "block";
+    //     actionButtonLink.href = "church.html";
+    // }
+    // else if (x < 500 && y < 1000 && y > 500) {
+    //     actionButton.innerText = "Explore Hunting Ground";
+    //     actionButton.style.display = "block";
+    //     actionButtonLink.href = "hunting.html";
+    // }
+    if (x < 500 && y < 2000 && y > 1000) {
         actionButton.innerText = "Explore Lake";
         actionButton.style.display = "block";
         actionButtonLink.href = "lake.html";
@@ -72,19 +72,19 @@ function drawScene() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   // Choose background based on position
-  if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
-    ctx.drawImage(hospitalBackground, 0, 0, canvas.width, canvas.height);
-  } 
-  else if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
-    ctx.drawImage(pagodaBackground, 0, 0, canvas.width, canvas.height);
-  } 
-  else if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
-    ctx.drawImage(churchBackground, 0, 0, canvas.width, canvas.height);
-  }
-  else if (x < 500 && y < 1000 && y > 500) {
-    ctx.drawImage(tigerBackground, 0, 0, canvas.width, canvas.height);
-  }
-  else if (x < 500 && y < 2000 && y > 1000) {
+  // if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
+  //   ctx.drawImage(hospitalBackground, 0, 0, canvas.width, canvas.height);
+  // } 
+  // else if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
+  //   ctx.drawImage(pagodaBackground, 0, 0, canvas.width, canvas.height);
+  // } 
+  // else if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
+  //   ctx.drawImage(churchBackground, 0, 0, canvas.width, canvas.height);
+  // }
+  // else if (x < 500 && y < 1000 && y > 500) {
+  //   ctx.drawImage(tigerBackground, 0, 0, canvas.width, canvas.height);
+  // }
+  if (x < 500 && y < 2000 && y > 1000) {
     ctx.drawImage(lakeBackground, 0, 0, canvas.width, canvas.height);
   }
   else {
