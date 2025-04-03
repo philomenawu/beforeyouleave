@@ -111,7 +111,7 @@ function parseInput() {
             }
             else {
                 if (!gameState.inventory.includes('lamp')) {
-                    gameData.shop.commands['open door'].output = 'You open the front door. It is too dark to treck down the mountain.';
+                    gameData.shop.commands['open door'].output = 'You open the front door. It is too dark to treck down the mountain. You remember leaving your flashlight somewhere upstairs.';
                 }
                 else {
                     gameData.shop.commands['open door'].action = function() {
