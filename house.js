@@ -221,7 +221,7 @@ const gameData = {
         
             'open cabinet': {
                         output: `You find miscellaneous items strewn about inside including your trusty <span style="color: white; font-weight: bold;">FLASHLIGHT</span> you always bring with you on night jobs. You should
-                        make sure to <i>pick it up</i> and take it with you outside.`
+                        make sure to <i>pick it up</i> and take it with you when going outside.`
                     },
             
             'pick up flashlight': { 
