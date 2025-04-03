@@ -1,11 +1,11 @@
 // Inside rooms
 const gameData = {
     start: {
-        description: `You arrive at the hospital. It's a rather small building and about a 30 minute walk up the mountain from your house.
+        description: `You arrive at the <span style="font-weight: bold;">HOSPITAL</span>. It's a rather small building and about a 30 minute walk up the mountain from your house.
         After back and forth negotiations with government officials over several months, you still take pride in finally having convinced them to approve its construction.
-        You should <i>enter</i> the hospital to investigate the strange call.`,
+        You should <i>enter</i> the <span style="font-weight: bold;">HOSPITAL</span> to investigate the strange call.`,
         commands: {
-            'look': { output: `The building is long and narrow. Overgrown thickets crawl up the sides of the building and cover the hospital sign. The place is illuminated
+            'look': { output: `The building is long and narrow. Overgrown thickets crawl up the sides of the building and cover the <span style="font-weight: bold;">HOSPITAL</span> sign. The place is illuminated
                 only by your flashlight and the moon. <i> You should go inside and check if anything is off... </i>`},
             'enter hospital': { nextRoom: 'corridor', output: `You walk up to the entrance and step inside the hospital, finding yourself in the 
                 <span style="font-weight: bold;">CORRIDOR</span>.`,
@@ -78,7 +78,7 @@ const gameData = {
     window: {
         description: `The shutters noisly hit against the side of the wall from the strong winds outside. You look out and take in the view of
         the dark sea of mountains and shimmering metal rooftops of houses below. It feels as if you can almost touch the moon from this high up the mountain.
-        As much as you enjoy the view, you should <i>close</i> the window before any wildlife starts flying in.`,
+        As much as you enjoy the view, you should <i>close</i> the <span style="font-weight: bold;"> WINDOW </span> before any wildlife starts flying in.`,
         commands: {
             'look': { output: `Despite the dark, you can make out the rolling sea of mountains and the shimmering metal rooftops of houses below.`,
                 action: function () {
