@@ -27,9 +27,10 @@ const gameData = {
         }
     },
     corridor: {
-        description: `Empty hospital beds line the corridor. The most recent patient was discharged earlier that afternoon. You wonder
-        where the nightshift nurses are...and who rang you. It's eerily quiet other than the ticking of
-        the clock and crickets outside. You notice one of the <span style="font-weight: bold;"> WINDOWS </span> was left open.`,
+        description: `Empty hospital beds line the hallway. The most recent patient was discharged earlier that afternoon. 
+        You wonder where the nightshift nurses are...and who rang you. It's eerily quiet other than the ticking of
+        the clock and crickets outside. You notice one of the <span style="font-weight: bold;"> WINDOWS </span> was left open.
+        The shutters noisly hit against the side of the wall from the strong winds outside.`,
         commands: {
             'look': { output: `Empty hospital beds line the corridor. One of the<span style="font-weight: bold;"> WINDOWS </span> is open.`,
                 action: function () {
@@ -51,8 +52,9 @@ const gameData = {
                 }, 0);
                 }
             },
-            'examine figure': { nextRoom: 'door', output: `You can barely make out the silhouette of the figure. What seems like hazy smoke fogs its features and distorts its mass.
-                Yet you can't shake the feeling that it's someone you know. You wonder if it's a patient of yours who's recently passed away.`,
+            'examine ghost': { nextRoom: 'door', output: `You can barely make out the silhouette of the figure. 
+                What seems like hazy smoke blurs distorts its mass and features except for its bright eyes that seem to stare right through you. It doesn't move nor
+                make any sound. For some odd reason, you can't shake the feeling that it's someone you know. You wonder if they're a past patient of yours who has recently passed away- a lost soul.`,
                 action: function () {
                     document.getElementById('topimg').src="art/ghostclose.png";
                     setTimeout(() => {
@@ -65,7 +67,9 @@ const gameData = {
         }
     },
     window: {
-        description: `The shutters of the window loudly clang against the side of the building.`,
+        description: `The shutters noisly hit against the side of the wall from the strong winds outside. You look out and take in the view of
+        the dark sea of mountains and shimmering metal rooftops of houses below. It feels as if you can almost touch the moon from this high up the mountain.
+        As much as you enjoy the view, you should <i>close</i> the window before any wildlife starts flying in.`,
         commands: {
             'look': { output: `Despite the dark, you can make out the rolling sea of mountains and the shimmering metal rooftops of houses below.`,
                 action: function () {
@@ -78,24 +82,26 @@ const gameData = {
                   }
             },
             'close window': { 
-                output: `A strong breeze rushes in before you shut the window close, engulfing yourself in darkness with just the light from your flashlight. 
-                It feels as if the temperature has dropped by 20 degrees in the
-                <span style="font-weight: bold;">CORRIDOR</span>`,
+                output: `A sudden strong breeze rushes in as you shut the window close, loudly slamming the shutters. You're abruptly engulfed in darkness with 
+                just the light from your flashlight. A chill runs down your spine. It feels as if the temperature has dropped by 20 degrees. <i>
+                You should go back to the </i> <span style="font-weight: bold;">CORRIDOR</span>.`,
                 action: function () {
                     document.getElementById('topimg').src="art/closedwindow.png";
                     gameState.windowClosed = true; // Flag set to true after closing the window
 
-                    gameData.corridor.description = `You stumble back as you suddenly notice a pale ghostly <span style="font-weight: bold;">FIGURE</span> looming over you on the opposite side of the room.
-                    Having been raised in the mountains, stumbling across wandering spirits and ghosts are not an uncommon occurrence for you, especially during these late-night calls, but
-                    you've never had one come to you.`;
+                    gameData.corridor.description = `You stumble back as you suddenly notice a pale faint <span style="font-weight: bold;">GHOST</span> towering over you on the opposite side of the room.
+                    Where you imagine its head to be almost reaches the ceiling. You try to contain your shock at its towering stature.
+                    Having been born and raised in the mountains, you can't say you've gotten used to the supernatural, but stumbling across wandering spirits and 
+                    ghosts are not an uncommon occurrence for you especially during these late-night calls...but
+                    you've never had one seemingly and suddenly reveal itself in front you.`;
 
                     gameData.window.description = ``;
                     gameData.window.commands["look"].output = `The window is now shut.`;
                     gameData.window.commands["look"].action = function () {
                         document.getElementById('topimg').src="art/closedwindow.png";
                     };
-                    gameData.corridor.commands["look"].output = "Empty hospital beds line the corridor. A towering ghostly figure silently hovers on the opposite side of the room.";
-                    gameData.corridor.commands["examine windows"].output = "The window is now closed.";
+                    gameData.corridor.commands["look"].output = "Empty hospital beds line the corridor. A towering ghostly figure silently observes you from the opposite side of the room.";
+                    gameData.corridor.commands["examine windows"].output = "All the windows are now closed.";
                     gameData.corridor.commands["examine windows"].action = function () {
                         document.getElementById('topimg').src="art/closedwindow.png";
                     };
@@ -103,7 +109,7 @@ const gameData = {
             },
             'go to corridor': { 
                 nextRoom: 'corridor', 
-                output: `You turn around to the <span style="font-weight: bold;">CORRIDOR</span>.`,
+                output: `You turn around and go back to the <span style="font-weight: bold;">CORRIDOR</span>.`,
                 action: function () {
                     // Only display ghost if the window was closed
                     if (gameState.windowClosed) {
@@ -122,12 +128,13 @@ const gameData = {
         }
     },
     door: {
-        description: `You point your flashlight towards the ghost causing it to quickly vanish. A strong gust of wind envelops you, you shut your eyes and hold your breath
-        bracing for impact that never comes. Instead you hear the entrance <span style="font-weight: bold;">DOOR</span> creak behind you.`,
+        description: `You point your flashlight towards the ghost causing it to quickly dissipate. A strong gust of wind envelops you, you shut your eyes and hold your breath,
+        bracing for an impact that never comes. Instead you hear the <span style="font-weight: bold;">DOOR</span> creak behind you.`,
         commands: {
-        'look': `.`,
-        'examine door': {output: `You turn towards the door and notice that it's now slightly ajar..For some odd reason, you still can't shake the feeling that you've crossed 
-            paths with this lost spirit before. A sense of deja vu and familiarty fills you, as if it's beckoning you to follow.`,
+        'look': `The ghost has left and is no longer in the hospital, leaving the door behind you slightly ajar.`,
+        'examine door': {output: `You turn towards the door and notice that it's now slightly ajar. Rather than fear, you're filled with curiosity and remorse.
+            You've crossed paths with this lost soul before. You just know it. You know them like a name on the tip of your tongue. It's beckoning you to follow...
+            <i>you should leave the hospital...</i>`,
             action: function () {
                 document.getElementById('topimg').src="art/door.png";
                 setTimeout(() => {
