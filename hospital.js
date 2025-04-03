@@ -42,6 +42,15 @@ const gameData = {
                   }, 0);
                   }
             },
+            'examine corridor': {output: `Empty hospital beds line the corridor. One of the<span style="font-weight: bold;"> WINDOWS </span> is open.`,
+                action: function() {
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
+                }
+            },
             'examine windows': { nextRoom: 'window', output: `You move to the open <span style="font-weight: bold;">WINDOW</span>.`,
                 action: function () {
                   document.getElementById('topimg').src="art/hospitalwindow.png";
@@ -101,6 +110,7 @@ const gameData = {
                         document.getElementById('topimg').src="art/closedwindow.png";
                     };
                     gameData.corridor.commands["look"].output = "Empty hospital beds line the corridor. A towering ghostly figure silently observes you from the opposite side of the room.";
+                    gameData.corridor.commands["examine corridor"].output = "Empty hospital beds line the corridor. A towering ghostly figure silently observes you from the opposite side of the room.";
                     gameData.corridor.commands["examine windows"].output = "All the windows are now closed.";
                     gameData.corridor.commands["examine windows"].action = function () {
                         document.getElementById('topimg').src="art/closedwindow.png";
