@@ -8,7 +8,7 @@ const gameData = {
                         You don't know how long it's been going for. After a long day at the hospital you always seem to find yourself dozing off…but you're never truly off the clock 
                         with these late-night calls. You pick yourself up from the cushioned <span style="color: white; font-weight: bold;">BENCH</span> and stretch your arms and neck. You feel a deep ache in your back as you hear bones crack…
                         God you're getting old. You turn back around, groping the <span style="color: white; font-weight: bold;">BENCH</span> to find your <span style="color: white; font-weight: bold;">GLASSES</span>
-                         when you realize it must have fallen to the <span style="color: white; font-weight: bold;">FLOOR</span>. You should <i> pick up </i> your glasses.`
+                         when you realize it must have fallen to the <span style="color: white; font-weight: bold;">FLOOR</span>. <i>You should pick them up</i>.`
                      },
 
             'go north': { output: `You can not move north from here.`},
