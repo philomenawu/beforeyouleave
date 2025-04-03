@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a9397ecdef.js" crossorigin="anonymous"></script>
+    <title>Church</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=Bentham&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Micro+5&family=Nothing+You+Could+Do&family=Pangolin&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Reenie+Beanie&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&family=Schoolbell&family=Shadows+Into+Light&family=Silkscreen:wght@400;700&family=Single+Day&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center; 
+            background-image: url(art/home2.png);
+            background-color: white;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .container {
+            width: 30vw;
+            text-align: center;
+            font-family: "Alice", serif;
+            font-size: 24pt;
+            color: rgb(37, 74, 194);
+            top: 15%;
+            position: absolute;
+        }
+        .about {
+            margin-top: 80px;
+            width: 30vw;
+            height: 50vh;
+            overflow-y: scroll;
+            text-align: left;
+            font-family: "Alice", serif;
+            font-size: 12pt;
+            color: black;
+            line-height: 1.2;
+            padding-right: 10px;
+        }
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 4px; /* Width of the scrollbar */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0); /* Light transparent background */
+        }
+
+        /* Thumb */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0); /* White thumb */
+            border-radius: 10px;
+            border: 1px solid rgb(37, 74, 194); /* Matches your body bg */
+        }
+
+        /* Thumb hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(37, 74, 194); /* Accent color */
+        }
+        .actionButton {
+            font-family: "Alice", serif;
+            font-size: 14pt;
+            background-color: rgba(255, 255, 255, 0.783);
+            border: 1px solid black;
+            color: rgb(0, 0, 0);
+            border-radius: 12pt;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            width: 8%;
+        }
+
+        .actionButton:hover {
+            background-color: rgb(0, 93, 215);
+            cursor: pointer;
+            font-family: "Alice", serif;
+            font-size: 14pt;
+            border: 1.5px solid black;
+            color: rgb(255, 255, 255);
+            border-radius: 12pt;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            width: 8%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <p>Before you leave...</p>
+        </div>
+        <br>
+        <div class="about">
+            <p>How do we remember a place, a person, an object, a scent that no longer exists but only in our memories?<br><br>
+
+                Growing up, my mom would always tell me stories recalling her childhood in the poor rural mountainous village of Falam, 
+                Myanmar where her dad worked as a doctor. Stories of the view above the clouds from on top of the mountain, her mom's garden, 
+                chasing fireflies, climbing trees to find bird nests, stumbling across ghosts and whispering spirits that wander the forests…
+                places that she left behind decades ago and that no longer exists from the cross fire of bombs in an ongoing civil war…<br><br>
+
+                Before You Leave is a narrative based video game that takes inspiration from these stories and is an attempt to retell some 
+                of these memories through the perspective of a village doctor reflecting on his life in the village while following a ghost. 
+                It's a diaspora of memories and layers of generational storytelling lost in translation from my grandpa to my mom and now to me.<br><br>
+
+                While the player is invited to explore the story by prompting the game console through typing short commands or using arrow keys 
+                to navigate the character through the storybook-like pages of the browser, they are also able to directly participate and 
+                contribute to building a collective memory by being prompted throughout the game to answer questions from their own memory by 
+                either drawing or writing in the book provided with the game. “Draw your childhood home.” “Describe your mom's voice.” “Draw the 
+                hands of someone you loved.”<br><br>
+                Before You Leave is a dialogue between digital and physical, past and present, game and player, 
+                but most of all an invitation to remember.
+                </p>
+        </div>
+        <br>
+            <button class="actionButton" onclick="window.location.href='index.html'">Back</button>
+        
+    </body>
