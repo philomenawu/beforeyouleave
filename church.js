@@ -107,7 +107,7 @@ const gameData = {
             action: function () {
                 document.getElementById('topimg').src="art/litcandle.png";
                 gameData.pew.commands['pray'].output = `You clasp your hands together and close your eyes in prayer...You wish for the safe and 
-                peaceful passage of this lost soul...(<i> open your eyes when you finish praying </i>.)`
+                peaceful passage of this lost soul...<i>(open your eyes when you finish praying). </i>`
                 gameData.pew.commands['pray'].action = function () {
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
@@ -150,7 +150,7 @@ const gameData = {
                     }, 0);
                 }
             },
-            'pray': {output: `You should light up a <span style="font-weight: bold;"> CANDLE </span> before offering a prayer.`,
+            'pray': {output: `You should <i>go to</i> the <span style="font-weight: bold;"> CANDLES </span> and <i>light</i> one up before offering a prayer.`,
                 action: function () {
                 setTimeout(() => {
                     document.querySelectorAll('#textoutput span').forEach(span => {
