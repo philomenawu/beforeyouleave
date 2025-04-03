@@ -12,6 +12,7 @@ const gameData = {
                 action: function () {
                   document.getElementById('topimg').src="art/beds.png";
                   document.getElementById('prompt').style.color="white";
+                  document.getElementById('userinput').style.color="white";
                   document.body.style.backgroundColor = "rgb(37, 74, 194)";
                   document.body.style.color = "white";
                   setTimeout(() => {
@@ -35,6 +36,7 @@ const gameData = {
                     setTimeout(() => {
                       document.querySelectorAll('#textoutput span').forEach(span => {
                           span.style.color = "white";
+                          document.getElementById('userinput').style.color="white";
                       });
                   }, 0);
                   }
@@ -75,39 +77,46 @@ const gameData = {
                   }, 0);
                   }
             },
-            'close window': { output: `A strong breeze rushes in before you shut the window close, engulfing yourself in darkness with just the light from your flashlight. 
+            'close window': { 
+                output: `A strong breeze rushes in before you shut the window close, engulfing yourself in darkness with just the light from your flashlight. 
                 It feels as if the temperature has dropped by 20 degrees in the
                 <span style="font-weight: bold;">CORRIDOR</span>`,
                 action: function () {
-                  document.getElementById('topimg').src="art/closedwindow.png";
-                  gameData.corridor.description = `You stumble back as you suddenly notice a pale ghostly <span style="font-weight: bold;">FIGURE</span> looming over you on the oppostie side of the room.
-                  Having been raised in the mountains, stumbling across wandering spirits and ghosts are not and uncommon occurance for you, especially during these late-night calls, but
-                  you've never had one come to you.`;
-                  gameData.window.description = ``;
-                  gameData.window.commands["look"].output = `The window is now shut.`
-                  gameData.window.commands["look"].action = function () {
                     document.getElementById('topimg').src="art/closedwindow.png";
-                  }
-                  gameData.corridor.commands["look"].output = "Empty hospital beds line the corridor. A towering ghostly figure silently hovers on the opposite side of the room. "
-                  gameData.corridor.commands["examine windows"].output = "The window is now closed."
-                  gameData.corridor.commands["examine windows"].action = function () {
-                    document.getElementById('topimg').src="art/closedwindow.png";
-                  }
-                  setTimeout(() => {
-                    document.querySelectorAll('#textoutput span').forEach(span => {
-                        span.style.color = "white";
-                    });
-                }, 0);
+                    gameState.windowClosed = true; // Flag set to true after closing the window
+
+                    gameData.corridor.description = `You stumble back as you suddenly notice a pale ghostly <span style="font-weight: bold;">FIGURE</span> looming over you on the opposite side of the room.
+                    Having been raised in the mountains, stumbling across wandering spirits and ghosts are not an uncommon occurrence for you, especially during these late-night calls, but
+                    you've never had one come to you.`;
+
+                    gameData.window.description = ``;
+                    gameData.window.commands["look"].output = `The window is now shut.`;
+                    gameData.window.commands["look"].action = function () {
+                        document.getElementById('topimg').src="art/closedwindow.png";
+                    };
+                    gameData.corridor.commands["look"].output = "Empty hospital beds line the corridor. A towering ghostly figure silently hovers on the opposite side of the room.";
+                    gameData.corridor.commands["examine windows"].output = "The window is now closed.";
+                    gameData.corridor.commands["examine windows"].action = function () {
+                        document.getElementById('topimg').src="art/closedwindow.png";
+                    };
                 }
             },
-            'go to corridor': { nextRoom: 'corridor', output: `You turn around to the <span style="font-weight: bold;">CORRIDOR</span>.`,
+            'go to corridor': { 
+                nextRoom: 'corridor', 
+                output: `You turn around to the <span style="font-weight: bold;">CORRIDOR</span>.`,
                 action: function () {
-                  document.getElementById('topimg').src="art/ghost.png";
-                  setTimeout(() => {
-                    document.querySelectorAll('#textoutput span').forEach(span => {
-                        span.style.color = "white";
-                    });
-                }, 0);
+                    // Only display ghost if the window was closed
+                    if (gameState.windowClosed) {
+                        document.getElementById('topimg').src="art/ghost.png";
+                    }
+                    else {
+                        document.getElementById('topimg').src="art/beds.png";
+                    }
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
                 }
             }
         }

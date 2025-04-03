@@ -6,6 +6,7 @@ let gameState = {
     dialogueState: false,
     startState: false,
     journalState: false,
+    windowClosed: false,
 };
 
 // Format output for command
