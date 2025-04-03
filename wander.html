@@ -133,6 +133,22 @@
         }
         #actionButton {
             position: absolute;
+            z-index: 10;
+            font-family: "Alice", serif;
+            font-size: 14pt;
+            background-color: rgba(255, 255, 255, 0.783);
+            border: 1px solid black;
+            color: rgb(0, 0, 0);
+            border-radius: 15pt;
+            position: absolute;
+            top: 180px; /* Keep it near the top */
+            left: 57%; /* Center it horizontally */
+            transform: translateX(-50%);
+            display: none;
+            padding: 10px;
+        }
+        /* #actionButton {
+            position: absolute;
             padding: 10px;
             z-index: 99999; 
             font-family: "Alice", serif;
@@ -142,19 +158,23 @@
             color: rgb(0, 0, 0);
             border-radius: 15pt;
             margin-top: 80vh;
-        }
+        } */
         #actionButton:hover {
+            background-color: rgb(0, 93, 215);
+            cursor: pointer;
             position: absolute;
-            padding: 10px;
-            z-index: 99999; 
+            z-index: 10;
             font-family: "Alice", serif;
             font-size: 14pt;
-            background-color: rgb(0, 93, 215);
             border: 3px solid black;
-            color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
             border-radius: 15pt;
-            margin-top: 80vh;
-            cursor: pointer;
+            position: absolute;
+            top: 180px; /* Keep it near the top */
+            left: 57%; /* Center it horizontally */
+            transform: translateX(-50%);
+            display: none;
+            padding: 10px;
         }
 
     </style>
