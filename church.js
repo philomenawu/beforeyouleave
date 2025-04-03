@@ -14,6 +14,7 @@ const gameData = {
             'enter church': { nextRoom: 'nave', output: `You walk up the steps of the church, push the doors open, and enter inside.`,
                 action: function () {
                   document.getElementById('topimg').src="art/churchinside.png";
+                  document.getElementById('userinput').style.color="white";
                   document.getElementById('prompt').style.color="white";
                   document.body.style.backgroundColor = "rgb(37, 74, 194)";
                   document.body.style.color = "white";
