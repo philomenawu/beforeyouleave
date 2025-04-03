@@ -32,8 +32,8 @@
             position: absolute;
         }
         .about {
+            flex: 1; /* Makes them equally sized */
             margin-top: 80px;
-            width: 25vw;
             height: 50vh;
             overflow-y: scroll;
             text-align: left;
@@ -41,8 +41,12 @@
             font-size: 12pt;
             color: black;
             line-height: 1.2;
-            padding-right: 10px;
+            padding: 20px;
+            background: rgba(255, 255, 255); /* Optional: Adds a background for readability */
+            border-radius: 10px; /* Optional: Rounds the corners */
+            text-align: center;
         }
+        
         /* Scrollbar styling */
         ::-webkit-scrollbar {
             width: 4px; /* Width of the scrollbar */
@@ -96,32 +100,58 @@
         a {
             text-decoration: none;
         }
+
+        .about-container {
+            display: flex;
+            justify-content: space-between; /* Distributes them evenly */
+            width: 90vw; /* Adjust width as needed */
+            max-width: 1200px; /* Ensures it doesn't stretch too much */
+            gap: 20px; /* Adds spacing between columns */
+            margin-top: 20px;
+            padding: 15px;
+        }
+
+        img {
+            margin-top: 25%;
+        }
     </style>
     <body>
         <div class="container">
             <p>Before you leave...</p>
         </div>
         <br>
-        <div class="about">
-            <p>How do we remember a place, a person, an object, a scent that no longer exists but only in our memories?<br><br>
-
-                Growing up, my mom would always tell me stories recalling her childhood in the poor rural mountainous village of Falam, 
-                Myanmar where her dad worked as a doctor. Stories of the view above the clouds from on top of the mountain, her mom's garden, 
-                chasing fireflies, climbing trees to find bird nests, stumbling across ghosts and whispering spirits that wander the forests…
-                places that she left behind decades ago and that no longer exists from the cross fire of bombs in an ongoing civil war…<br><br>
-
-                Before You Leave is a narrative based video game that takes inspiration from these stories and is an attempt to retell some 
-                of these memories through the perspective of a village doctor reflecting on his life in the village while following a ghost. 
-                It's a diaspora of memories and layers of generational storytelling lost in translation from my grandpa to my mom and now to me.<br><br>
-
-                While the player is invited to explore the story by prompting the game console through typing short commands or using arrow keys 
-                to navigate the character through the storybook-like pages of the browser, they are also able to directly participate and 
-                contribute to building a collective memory by being prompted throughout the game to answer questions from their own memory by 
-                either drawing or writing in the book provided with the game. “Draw your childhood home.” “Describe your mom's voice.” “Draw the 
-                hands of someone you loved.”<br><br>
-                Before You Leave is a dialogue between digital and physical, past and present, game and player, 
-                but most of all an invitation to remember.
-                </p>
+        <div class="about-container">
+            <div class="about">
+                <h3>Text-Based Interaction</h3>
+                <p style="text-align: center;">Type short 2-3 word commands and press the enter key.<br></p>
+                <p style="text-align: center;">Commands may include:</p>
+                <li style="text-align: left; margin-left: 30%;">go north</li>
+                <li style="text-align: left; margin-left: 30%;">go south</li>
+                <li style="text-align: left; margin-left: 30%;">go east</li>
+                <li style="text-align: left; margin-left: 30%;">go west</li>
+                <li style="text-align: left; margin-left: 30%;">look</li>
+                <li style="text-align: left; margin-left: 30%;">examine ___</li>
+                <li style="text-align: left; margin-left: 30%;">open ___</li>
+                <li style="text-align: left; margin-left: 30%;"> pick up ___</li>
+                <br><br>
+                <p>Words that are bolded and capitalized may be interacted with and used in a command.</p>
+            </div>
+            <div class="about">
+                <h3>Keyboard Navigation</h3>
+                <img src="art/player.png">
+                <br><br><br><br><br>
+                <p>Use the up, right, down, and left arrow keys<br> of the keyboard to move the character across the screen.</p>
+            </div>
+            <div class="about">
+                <h3>Player Book</h3>
+                <p style="align-items: center; justify-content: center;">
+                This game is meant to be played using both the desktop and the book provided.<br><br>
+                Draw or write in the book when prompted by the game.<br><br>
+                There will be a set timer for you to complete the prompt in the book 
+                before continuing the game.<br><br>
+                After completing the game, you may either take the book with you, or leave it
+                behnd for others to enjoy.</p>
+            </div>
         </div>
         <br>
             <button class="actionButton" onclick="window.location.href='index.html'">Back</button>
