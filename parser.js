@@ -93,28 +93,6 @@ function parseInput() {
         }
     }
 
-    // if (!gameState.startState) {
-    //     if (userInput === 'start') {
-    //         gameState.startState = true;
-    //         updateGameOutput(roomData.commands[userInput].output, userInput);
-    //         roomData.commands[userInput].output = 'The game has already started.';
-    //     }
-    //     else {
-    //         updateGameOutput('Type \'start\' to start the game.', userInput);
-    //     }
-    //     return;
-    // }
-
-    // if (gameState.dialogueState) {
-    //     handleDialogue(userInput); 
-    //     return;
-    // }
-
-    // if (gameState.journalState) {
-    //     handleJournal(userInput);
-    //     return;
-    // }
-
     // Check if the command exists in the current room's commands
     if (roomData.commands[userInput]) {
         const command = roomData.commands[userInput];

@@ -1,25 +1,30 @@
 // Call_1 Dialogue Script
 const dialogue = [
     `You: Hello? This is Dr. Kui speaking.`,
-    `Office: Good evening, Dr. Kui. You have a line request from the hospital.`,
+    `Office: Good evening, Dr. Kui. You have a line request coming from the hospital.`,
     `You: Yes, please transfer it over.`,
     `Office: One moment.`,
     `.`,
     `.`,
     `.`,
-    `?: ...`,
+    `?: ...dd-do yy-o-u kno-w- wheee-r-e i..y-ou...a-m..?`,
      {
         options: [
             {
-                text: `You: Hello?`, 
-                output: `?: `
+                text: `You: Hello? Who is this?`, 
+                output: `?: ...co-m-e f-i-nnd me...`
             },
             {
-                text: `You: Who is this?`, 
-                output: `?: wander and find me...`
+                text: `You: Aren't you at the hospital?`, 
+                output: `?: he-llp i a-am l-o-s-t...come...`
+            },
+            {
+                text: `You: Do I know you?`, 
+                output: `?: he-llp i a-am l-o-s-t...c-ome fiii-nd me...`
             },
         ]
      },
+     `...`
 ];
 
 // Track current dialogue line
@@ -70,7 +75,7 @@ function handleDialogue() {
             if (currentLine.startsWith("You:")) {
                 style = "color: white;";
             } else if (currentLine.startsWith("Office:")) {
-                style = "color: gray; font-style: italic;";
+                style = "color: white; font-style: italic;";
             } else if (currentLine.startsWith("?")) { 
                 style = "color: gray; font-size: 10pt; animation: glitch 0.2s infinite alternate;";
             }
@@ -79,12 +84,6 @@ function handleDialogue() {
             dialogueIndex++;
             textContainer.scrollTop = textContainer.scrollHeight;
         }
-        // Display dialogue lines
-        // else {
-        //     textContainer.innerHTML += `<p>${dialogue[dialogueIndex]}</p>`;
-        //     dialogueIndex++;
-        //     textContainer.scrollTop = textContainer.scrollHeight;
-        // }
     } 
     // Close dialogue scene
     else {
