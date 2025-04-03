@@ -52,7 +52,7 @@ document.addEventListener("keydown", (event) => {
       break;
     case "ArrowRight":
       if (x  > canvas.width - 50) {
-        window.location.href = "prompt2.html";
+        window.location.href = "lake3.html";
       }
       x += 30;
       highlightButton('right-button');
