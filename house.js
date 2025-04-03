@@ -35,37 +35,37 @@ const gameData = {
                         floral cushions and a worn table of similar carved designs. Across the room is a taxidermied <span style="color: white; font-weight: bold;">TIGER</span>
                         that you and your friends hunted last year standing proudly on display by the box <span style="color: white; font-weight: bold;">TELEVISION</span> set. 
                         Next to it is a lone black rotary <span style="color: white; font-weight: bold;">TELEPHONE</span>. Despite the strict water and electricity schedule throughout the 
-                        entire village, being one of the only specialized doctors gives you the perk of being abruptly woken up in the middle of the night by the blaring noise to attend to emergencies back at your 
-                        hospital. Your wristwatch reveals it's just a quarter past midnight.`
+                        entire village, being one of the only specialized doctors gives you the perk of being abruptly woken up in the middle of the night by the blaring noise 
+                        in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight.`
                     },
 
-            'pick up telephone': { output: `You carefully place the telephone back down...taken aback by the strange call. You should head outside to check it out.`},
+            'pick up telephone': { output: `You carefully place the telephone back down...taken aback by the strange call. You should leave the house to check it out.`},
 
             'examine tiger': { 
-                        output: `You walk over to run your fingers through its vibrant fur. You can still remember the moment you shot it- 15 miles out from the village with 
+                        output: `You walk over and run your fingers through its vibrant fur. You can still remember the moment you shot it- 15 miles out from the village with 
                         your hunting squad (fellow coworkers at the hospital); the sound of his last roar. The whole village turned in early for the day and held a celebratory feast after hearing 
                         the news. Later that night you did your best to gut and taxidermize it, finding blue glass marbles to insert into its eyes. It's been a year since you last picked up your 
-                        hunting rifle after your wife sternly demanded to stop for the sake of your reputation as a doctor…`
+                        hunting rifle after your wife sternly demanded you to stop for the sake of your reputation as a doctor…`
                     },
             
             'examine television': { 
-                        output: `You make an effort to check out the VHS selection when the Mandalay merchant is in town with imported goods. 
-                        It's a rather old box set, but for many nights it's filled the entire living room with neighbors, old and young alike, eager to watch the colorful screen.`
+                        output: `You make an effort to check out the VHS selection when the Mandalay merchant is in town with imported goods. You've grown quite the collection.
+                        It's a rather old box set, but it's filled the entire living room with neighbors, old and young alike, eager to watch the colorful screen.`
                     },
             
-            'examine telephone': { output: `The telephone is a shiny black rotary. The clacking sounds as fingers turn the dial is engrained in your head.`},
+            'examine telephone': { output: `It's a shiny black rotary telephone. The clacking sounds as your fingers turn the dial is engrained in your head.`},
 
             'examine floor': { 
                         output: `You've been finding yourself waking up to your <span style="color: white; font-weight: bold;">GLASSES</span> on the floor lately. 
-                        You really should try to take better care of them. It'll be quite the trip to have to buy new ones if they break which you know your wife wouldn't 
+                        You really should try to take better care of them. It'll be quite the trip to have to buy new ones if they break, which you know your wife wouldn't 
                         be too pleased about. <i>You should pick it up before you accidentally step on them...</i>`
                     },
 
-            'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back and bottom made of woven cane.`},
+            'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back rest and bottom seat made of woven cane.`},
 
             'help': { 
                         output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, pick up item.<br>
-                        <i>HINT: Look around the room to search for clues and see what items can be interacted with.</i>`
+                        <i>HINT: Bolded and capitalized words can be interacted with.</i>`
                     }
         }
     },
@@ -73,7 +73,7 @@ const gameData = {
     bedroom: {
         description: `Your <span style="color: white; font-weight: bold;">WIFE</span> is asleep on the bed. The pale light of the moon through the slits of the window shutters casts a soft glow on her face. 
         Despite the two decades together, she doesn't seem to have aged since the two of you first met. You don't know how she manages it all- running the shop downstairs 
-        while taking care of the three little runts all asleep in the bedroom farther down the hallway.`,
+        while taking care of the three little runts all asleep in the bedroom farther <i>east</i> down the hallway.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
@@ -91,7 +91,7 @@ const gameData = {
             'examine mirror': 
                     { 
                         output: `You look at your reflection. You've grown to have a rather thick skin from being teased for your short stature. You're bundled in multiple layers
-                                to stay warm in the mountain cold which only seems to shrink you. You take your glasses off and push your dark hair away from your face- 
+                                to stay warm in the frigid mountain air which makes you look even smaller. You take your glasses off and push your dark hair away from your face- 
                                 you try to not think about how you'll be turning 50 in a few weeks...the darkness of the room helps to hide your dark circles. `,
                                 action: function() {
                                 gameState.action.push('mirror_1');
@@ -124,16 +124,16 @@ const gameData = {
 
             'examine wife':{ output: `You admire your wife's long ebony black hair which is usually hidden from the world in a neat bun. It pools into ripples around her face as she sleeps.
                                      With the two of you kept busy with work and the kids, you've come to savor any time alone...you should really stop making it a habit of falling asleep
-                                     on the bench instead of the bed (it'll probably be best for your back as well).`},
+                                     on the bench instead of the bed (it'll probably be best for your aching back as well).`},
 
-            'wake up wife':{ output: `You think it would be best for your physical and mental health to let her sleep after seeing how exhausted she looked when you got home.`},
+            'wake up wife':{ output: `You think it would be best for your physical and mental health to let her sleep after seeing how exhausted she looked when you arrived home.`},
 
             'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, take item, check item, etc.`}
         }
     },
 
     children: {
-        description: `All three <span style="color: white; font-weight: bold;">CHILDREN</span> share a bedroom. A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of their beds, 
+        description: `All three <span style="color: white; font-weight: bold;">CHILDREN</span> share a bedroom at the end of the hallway. A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of their beds, 
         giving a view of the mountainous village. The full moon can be seen clearly
         from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.`,
         commands: {
@@ -147,19 +147,19 @@ const gameData = {
 
             'look': { 
                     output: `In the bed to the farthest right of the room is your oldest daughter who just turned thirteen, then your middle child only two years younger,
-                    and at the farthest left your son- only four years old. You can only see the top of their shiny black hair poking from underneath the thick blankets. 
-                    A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of the children's beds, giving a view of the mountainous village. The full moon can be seen clearly
-                    from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.`
+                    and at the farthest left is your son- only four years old. You can only see the top of their shiny black hair poking from underneath the thick blankets. 
+                    A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of the children's beds, giving a view of the rolling mountains. 
+                    The full moon can be seen clearly from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.`
                 },
 
             'examine children': { output:  `In the bed to the farthest right of the room is your oldest daughter who just turned thirteen, then your middle child only two years younger,
-                and at the farthest left your son- only four years old. You can only see the top of their shiny black hair poking from underneath the thick blankets.`},
+                and at the farthest left is your son- only four years old. You can only see the top of their shiny black hair poking from underneath the thick blankets.`},
 
-            'wake up children': { output: `You and your wife have the children on a strict curfew which you don't want to mess with.`},
+            'wake up children': { output: `You and your wife have the children on a strict bedtime curfew which you don't want to mess with.`},
 
             'examine window': { 
-                    output: `You quietly make your way to the window and take in the view. Your house is situtated in the middle of the mountain by the main road- a winding
-                    path that leads up the the church and hospital. You can see the red metal rooftops of neighbors below against the sea of of trees and shrubbery. Rolling mountains extend out
+                    output: `You quietly make your way to the window and take in the view. Your house is settled in the middle of the mountain by the main road- a winding
+                    path that leads up to the church and hospital. You can see the red metal rooftops of neighbors below against the sea of of trees and shrubbery. Rolling mountains extend out
                     into the horizon, blending with the paint-splattered night sky.`
                 },
 
@@ -170,7 +170,7 @@ const gameData = {
     diningroom: {
         description: `At night, the dining room serves as a study space for your children. With the rolling blackouts throughout the village, you usually find them studying by 
         candlelight. The table is cluttered with crumpled up homework sheets and dull pencils. Wax drippings cover the surrounding surface. Despite how many times you and your 
-        wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn. The kitchen is farther down the hallway.`,
+        wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn. The kitchen is farther <i>west</i> down the hallway.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
@@ -186,31 +186,12 @@ const gameData = {
                     wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn.` 
                 },
 
-            // 'pick up lamp': { 
-            //           output: `You shake a match out of the matchbox and light the lamp. The light flickers wildly against the walls as you pick it up.`,
-            //           action: function() {
-            //             if (!gameState.inventory.includes('lamp')) {
-            //                 gameState.inventory.push('lamp');
-            //                 document.getElementById('body').classList.add('glowing-background');
-            //             }
-            //             if (gameState.action.includes('call_1')) {
-            //                 gameData.start.commands['go south'].action = function() {
-            //                     window.location.href = 'transition.html';
-            //                 };
-            //             }
-            //             else {
-            //             gameData.start.commands['go south'].output = `You really should answer the telephone call before you leave the house.`;
-            //             gameData.diningroom.commands['pick up lamp'].output = `You are already holding the lamp.`;
-            //             gameData.diningroom.commands['look'].output = `The dining table is cluttered with crumpled up homework sheets and dull pencils.`
-            //             }
-            //           }},
-
             'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, pick up item.`}
             }
         },
 
     kitchen: {
-        description: `The kitchen countertops are just as cluttered with <span style="color: white; font-weight: bold;">RECIPE</span> notes and scribbled grocery 
+        description: `You reach the end of the hallway. The kitchen countertops are just as cluttered with <span style="color: white; font-weight: bold;">RECIPE</span> notes and scribbled grocery 
         <span style="color: white; font-weight: bold;">LISTS</span>. A window across the room is left slightly ajar to 
         air out the charcoal scent from cooking. The shelves in the back are stocked with produce. Next to them is a closed wooden <span style="color: white; font-weight: bold;">CABINET</span>.
         You hear the sound of paws walking towards you with heavy panting. <span style="color: white; font-weight: bold;">TOMMY</span>, your labrador retriever, and 
@@ -231,9 +212,13 @@ const gameData = {
                         air out the charcoal scent. The shelves in the back are stocked with produce. Next to them is a closed wooden <span style="color: white; font-weight: bold;">CABINET</span>.
                         <span style="color: white; font-weight: bold;">TOMMY</span>, your labrador retriever, and <span style="color: white; font-weight: bold;">JACKIE</span>, your german shepherd, poke their head around the caged off corner of the kitchen.` 
                     },
-            
+            'examine cabinet': {
+                output: `The cabinet is closed but you can imagine all the random tools and knick knacks you and your family have tossed in there for storage keeping.`
+            },
+        
             'open cabinet': {
-                        output: `You find miscellaneous items strewn about inside including your trusty <span style="color: white; font-weight: bold;">FLASHLIGHT</span> you always bring with you on night jobs.`
+                        output: `You find miscellaneous items strewn about inside including your trusty <span style="color: white; font-weight: bold;">FLASHLIGHT</span> you always bring with you on night jobs. You should
+                        make sure to <i>pick it up</i> and take it with you outside.`
                     },
             
             'pick up flashlight': { 
@@ -251,17 +236,22 @@ const gameData = {
                     else {
                     gameData.shop.commands['leave house'].output = `You really should answer the telephone call before you leave the house.`;
                     gameData.diningroom.commands['pick up flashlight'].output = `You are already holding the flashlight.`;
-                    gameData.diningroom.commands['open cabinet'].output = `You find miscellaneous items strewn about inside.`
+                    gameData.diningroom.commands['open cabinet'].output = `You find miscellaneous items from dull pencils to matchboxes strewn about inside.`
                     }
                 }},
 
             'examine recipe': {
-                        output: ``
+                        output: `Your wife likes to write down her recipes in a journal that's starting to come apart with loose papers always being added.
+                        You don't know how she has yet to lose any. You skim through her notes on one of your favorite dishes of hers: mohinga.`
                     },
 
             'examine lists': {output: `You pick up the grocery list and need to squint in order to make out the messy note: Corn, Pumpkin, Oxtail…`},
 
             'pet Tommy': { output: `You pet Tommy. He furiously licks your hand while Jackie pushes his head against him, wanting a turn.`},
+
+            'examine Tommy': {output: `Tommy is a 5 year old mixed golden labrador. He's quite calm and friendly compared to Jackie.`},
+
+            'examine Jackie': {output: `Jackie is a 3 year old german shepherd who easily gets jealous of any attention not given to him.`},
 
             'pet Jackie': {output: `Jackie wags his tail and playfully bites at your fingers while you rub his back.`},
 
@@ -271,9 +261,9 @@ const gameData = {
     },
 
     shop: {
-        description: `The first floor of the house serves as the general shop your wife runs. Shelves and display cases line the store full with a selection of medicine and 
-        herbs, tools, soap, film rolls, clothes, blankets, and any other random goods she places and order with the Mandalay merchant. There's a painted blue 
-        <span style="color: white; font-weight: bold;">DOOR</span> at the front of the shop.`,
+        description: `The first floor of the house serves as the general shop your wife runs. The shelves and display cases that line the store are full 
+        with a selection of medicine and herbs, tools, soap, film rolls, clothes, blankets, and any other random goods she picks up from with the Mandalay merchant. There's a painted blue 
+        <span style="color: white; font-weight: bold;">DOOR</span> leading outside at the front of the shop.`,
 
         commands: {
             'go north': { nextRoom: 'start', output: `You move north and walk up the stairs to the living room.`},
@@ -285,12 +275,12 @@ const gameData = {
             'go west': { output: `You can not move west from here.`},
 
             'look': { 
-                    output: `The first floor of the house serves as the general shop your wife runs. Shelves and display cases line the store full with a selection of medicine and 
-                    herbs, tools, soap, film rolls, clothes, blankets, and any other random goods she places and order with the Mandalay merchant. There's a painted blue 
-                    <span style="color: white; font-weight: bold;">DOOR</span> at the front of the shop.`
+                    output: `The first floor of the house serves as the general shop your wife runs. The shelves and display cases that line the store are full 
+                    with a selection of medicine and herbs, tools, soap, film rolls, clothes, blankets, and any other random goods she picks up from the Mandalay merchant. There's a painted blue 
+                    <span style="color: white; font-weight: bold;">DOOR</span> leading outside at the front of the shop.`
                 },
 
-            'examine door': { output: `The door leads out to the main road.`},
+            'examine door': { output: `The door leads out to the main road. You should <i>open</i> the door to leave the house.`},
 
             'open door': { output: `You really should answer the telephone call before you leave the house.`},
 
