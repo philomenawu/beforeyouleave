@@ -35,6 +35,9 @@
             margin-top: 80px;
             width: 25vw;
             height: 50vh;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-radius: 10px;
             overflow-y: scroll;
             text-align: left;
             font-family: "Alice", serif;
@@ -96,10 +99,26 @@
         a {
             text-decoration: none;
         }
+
+        .floatingButton {
+            /* position: fixed; */
+            /* z-index: 1000; */
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5vw;
+        }
+        .nextImage {
+            height: 90%;
+            max-height: 60px;
+            width: auto;
+            cursor: pointer;
+        }
     </style>
     <body>
         <div class="container">
-            <p>Before you leave...</p>
+            <p>Preface</p>
         </div>
         <br>
         <div class="about">
@@ -129,6 +148,9 @@
                 <p style="text-align: center;"><i>23 April 1960, Picnic in Falam, Myanmar</i></p>
         </div>
         <br>
-            <button class="actionButton" onclick="window.location.href='index.html'">Back</button>
+        <div class="floatingButton">
+            <img class="nextImage" src="art/leftbutton.png" onclick="window.location.href='index.html'">
+            <img class="nextImage" src="art/nextbuton.png" onclick="window.location.href='controls.html'">
+        </div>
         
     </body>

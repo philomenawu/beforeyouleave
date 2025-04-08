@@ -1,7 +1,7 @@
 // Inside rooms
 const gameData = {
     start: {
-        description: `You're in a dark room. There's a telephone ringing.`,
+        description: `You're in a dark room. There's a telephone ringing. There's a staircase leading down <i>south</i>to the shop on the first floor.`,
         commands: {
             'start': { 
                         output: `You rub the sleep from your eyes as you're pulled from a dream you already forgot. You can hear the <span style="color: white; font-weight: bold;">TELEPHONE</span> across the room loudly ringing. 
@@ -65,8 +65,7 @@ const gameData = {
             'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back rest and bottom seat made of woven cane.`},
 
             'help': { 
-                        output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, pick up item.<br>
-                        <i>HINT: Bolded and capitalized words can be interacted with.</i>`
+                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine item, pick up item.`
                     }
         }
     },
@@ -129,7 +128,7 @@ const gameData = {
 
             'wake up wife':{ output: `You think it would be best for your physical and mental health to let her sleep after seeing how exhausted she looked when you arrived home.`},
 
-            'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, take item, check item, etc.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, go west, examine item, wake up wife.`}
         }
     },
 
@@ -164,7 +163,7 @@ const gameData = {
                     into the horizon, blending with the paint-splattered night sky.`
                 },
 
-            'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, take item, check item, etc.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go west, examine item, wake up children.`}
         }
     },
 
@@ -188,7 +187,7 @@ const gameData = {
                     wife have scolded them to tidy up after, it's always a gamble to find a clean table come dawn.` 
                 },
 
-            'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, pick up item.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, go west.`}
             }
         },
 

@@ -22,7 +22,7 @@
             width: 30vw;
             text-align: center;
             font-family: "Alice", serif;
-            font-size: 24pt;
+            font-size: 32pt;
             color: rgb(37, 74, 194);
             top: 30%;
             position: absolute;
@@ -45,41 +45,65 @@
         }
         .actionButton {
             font-family: "Alice", serif;
-            font-size: 14pt;
-            width: 25%;
-            background-color: rgba(255, 255, 255, 0.783);
-            border: 1px solid black;
-            color: rgb(0, 0, 0);
+            font-size: 24pt;
+            width: 100%;
+            border: none;
+            color: rgb(37, 74, 194);
             border-radius: 12pt;
             padding: 10px;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
+            background-color: transparent;
         }
 
         .actionButton:hover {
-            background-color: rgb(0, 93, 215);
-            cursor: pointer;
             font-family: "Alice", serif;
-            font-size: 14pt;
-            width: 25%;
-            border: 1.5px solid black;
-            color: rgb(255, 255, 255);
+            font-size: 24pt;
+            width: 100%;
+            border: none;
+            color: rgb(70, 94, 173);
             border-radius: 12pt;
             padding: 10px;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 20px;
+            font-style: italic;
+            cursor: pointer;
         }
         a {
             text-decoration: none;
         }
+
+        .floatingButton {
+            position: fixed;
+            bottom: 10vh;
+            right: 5vw;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 1vw;
+        }
+        .nextImage {
+            height: 90%;
+            max-height: 60px;
+            width: auto;
+            cursor: pointer;
+        }
+
     </style>
     <body>
         <div class="container">
-            <p>Before you leave...</p>
-            <button class="actionButton" onclick="window.location.href='about.html'">About</button>
-            <button class="actionButton" onclick="window.location.href='controls.html'">Controls</button>
+            <p style="margin-bottom: 0;">Before you leave...</p>
+            <p style="font-size: 12pt; font-style: italic; margin-top: 15px;">A work of interaction fiction</p>
+            <!-- possible subtitle: A work of interactive fiction, memories, remembering: look last sentence of about -->
+             <!-- serial podcast: marketing/trailer/subtitle -->
+            <!-- start -> goes to controls first, about last -->
+             <!-- paint/draw on wall -->
+              <!-- have 1 art book for crit -->
+               <!-- buttons more spatial (no borders) -->
+                <!-- no buttons, before you leave IS the button -->
+                 <!-- remove Before You Leave from control page, links to different page, make boxes more transparent -->
+                 <div class="floatingButton">
+                    <button class="actionButton" onclick="window.location.href='about.html'">Begin Story</button>
+                    <img class="nextImage" src="art/nextbuton.png" onclick="window.location.href='about.html'">
+                </div>
+            <!-- <button class="actionButton" onclick="window.location.href='controls.html'">Controls</button>
             <button class="actionButton" onclick="window.location.href='start.html'">Start</button>
+            <button class="actionButton" onclick="window.location.href='about.html'">About</button> -->
         </div>
     </body>

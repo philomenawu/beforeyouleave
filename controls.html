@@ -42,8 +42,8 @@
             color: black;
             line-height: 1.2;
             padding: 20px;
-            background: rgba(255, 255, 255); /* Optional: Adds a background for readability */
-            border-radius: 10px; /* Optional: Rounds the corners */
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
             text-align: center;
             /* display: flex;
             align-items: center;
@@ -128,13 +128,40 @@
             width: 17%;
             height: auto;
         }
+
+        .floatingButton {
+            /* position: fixed; */
+            /* z-index: 1000; */
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5vw;
+        }
+        .nextImage {
+            height: 90%;
+            max-height: 60px;
+            width: auto;
+            cursor: pointer;
+        }
     </style>
     <body>
         <div class="container">
-            <p>Before you leave...</p>
+            <p>Game Instructions</p>
         </div>
         <br>
         <div class="about-container">
+            <div class="about">
+                <h3>Player Book</h3>
+                <br>
+                <p>
+                This game is meant to be played using both the desktop and the book provided.<br><br>
+                Draw or write in the book when prompted by the game.<br><br>
+                There will be a set timer for you to complete the prompt in the book 
+                before continuing the game.<br><br>
+                After completing the game, you may either take the book with you, or leave it
+                behind for others to enjoy.</p>
+            </div>
             <div class="about">
                 <h3>Text-Based Interaction</h3>
                 <br>
@@ -150,6 +177,7 @@
                 <li style="text-align: left; margin-left: 30%;"> pick up ___</li>
                 <br>
                 <p>Words that are bolded and capitalized may be interacted with and used in a command.</p>
+                <p>Type 'help' to see what commands can be used within a room.</p>
     
             </div>
             <div class="about">
@@ -159,19 +187,11 @@
                 <br><br><br><br>
                 <p>Use the up, right, down, and left arrow keys<br> of the keyboard to move the character across the screen.</p>
             </div>
-            <div class="about">
-                <h3>Player Book</h3>
-                <br>
-                <p>
-                This game is meant to be played using both the desktop and the book provided.<br><br>
-                Draw or write in the book when prompted by the game.<br><br>
-                There will be a set timer for you to complete the prompt in the book 
-                before continuing the game.<br><br>
-                After completing the game, you may either take the book with you, or leave it
-                behind for others to enjoy.</p>
-            </div>
         </div>
         <br>
-            <button class="actionButton" onclick="window.location.href='index.html'">Back</button>
+        <div class="floatingButton">
+            <img class="nextImage" src="art/leftbutton.png" onclick="window.location.href='about.html'">
+            <img class="nextImage" src="art/nextbuton.png" onclick="window.location.href='wake.html'">
+        </div>
         
     </body>
