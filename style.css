@@ -101,7 +101,7 @@ input[type="text"]
 .menuclose-btn:hover,
 .menuclose-btn:focus {
     background-color: transparent;
-    color: white;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }.menuclose-btn {
     position: absolute;

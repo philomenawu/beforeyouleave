@@ -182,7 +182,7 @@
             gap: 20px; /* Adds spacing between columns */
             margin-top: 20px;
             padding: 15px;
-            background-color: rgba(37, 74, 194, 0.6);;
+            background-color: transparent;
         }
         .about {
             flex: 1; /* Makes them equally sized */
@@ -230,19 +230,49 @@
             width: 17%;
             height: auto;
         }
+        #menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 32px;
+            font-style: bold;
+            cursor: pointer;
+            background-color: transparent;
+            font-family: "Alice", serif;
+            border: none;
+            color: rgb(0, 0, 0);
+
+        }
+
+        #menu-button:hover,
+        #menu-button:focus {
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .menuclose-btn:hover,
+        .menuclose-btn:focus {
+            background-color: transparent;
+            color: rgb(72, 72, 72);
+            text-decoration: none;
+        }.menuclose-btn {
+            position: absolute;
+            top: 120px;
+            right: 120px;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <!-- Instructions -->
-    <div id="menu-container">
-        <div id="instructions">
-            <span class="menuclose-btn">&times;</span>
-            <h2>Game Instructions</h2>
-            <ul>
-                <p> > Use the arrow key buttons to navigate down the mountain.</p>
-            </ul>
-        </div>
-    </div>
     <div id="menu-container">
         <button class="menuclose-btn">✕</button>
         <div class="about-container">
@@ -273,14 +303,6 @@
                 <br>
                 <p>Words that are bolded and capitalized may be interacted with and used in a command.</p>
                 <p>Type 'help' to see what commands can be used within a room.</p>
-    
-            </div>
-            <div class="about">
-                <h3>Keyboard Navigation</h3>
-                <br>
-                <img id="figure" src="art/player.png">
-                <br><br><br><br>
-                <p>Use the up, right, down, and left arrow keys<br> of the keyboard to move the character across the screen.</p>
             </div>
         </div>
     </div>

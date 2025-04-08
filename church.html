@@ -170,17 +170,136 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgb(255, 255, 255); /* Accent color */
         }
+        .about-container {
+            display: flex;
+            justify-content: space-between; /* Distributes them evenly */
+            width: 90vw; /* Adjust width as needed */
+            max-width: 1200px; /* Ensures it doesn't stretch too much */
+            gap: 20px; /* Adds spacing between columns */
+            margin-top: 20px;
+            padding: 15px;
+            background-color: transparent;
+        }
+        .about {
+            flex: 1; /* Makes them equally sized */
+            margin-top: 80px;
+            height: 45vh;
+            overflow-y: scroll;
+            text-align: left;
+            font-family: "Alice", serif;
+            font-size: 12pt;
+            color: black;
+            line-height: 1.2;
+            padding: 20px;
+            background: rgb(255, 255, 255);
+            border-radius: 10px;
+            text-align: center;
+            /* display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column; */
+        }
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+        width: 4px; /* Width of the scrollbar */
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0); /* Light transparent background */
+        }
+
+        /* Thumb */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0); /* White thumb */
+            border-radius: 10px;
+            border: 1px solid rgb(37, 74, 194); /* Matches your body bg */
+        }
+
+        /* Thumb hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgb(37, 74, 194); /* Accent color */
+        }
+
+        #figure {
+            margin-top: 25%;
+            width: 17%;
+            height: auto;
+        }
+        #menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 15px;
+            font-size: 32px;
+            font-style: bold;
+            cursor: pointer;
+            background-color: transparent;
+            font-family: "Alice", serif;
+            border: none;
+            color: rgb(0, 0, 0);
+
+        }
+
+        #menu-button:hover,
+        #menu-button:focus {
+            background-color: transparent;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        .menuclose-btn:hover,
+        .menuclose-btn:focus {
+            background-color: transparent;
+            color: rgb(72, 72, 72);
+            text-decoration: none;
+        }.menuclose-btn {
+            position: absolute;
+            top: 120px;
+            right: 120px;
+            color: rgb(0, 0, 0);
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1001;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: transparent;
+            border: none;
+        }
     </style>
 </head>
 <body>
     <!-- Instructions -->
     <div id="menu-container">
-        <div id="instructions">
-            <span class="menuclose-btn">&times;</span>
-            <h2>Game Instructions</h2>
-            <ul>
-                <p> > Use the arrow key buttons to navigate down the mountain.</p>
-            </ul>
+        <button class="menuclose-btn">✕</button>
+        <div class="about-container">
+            <div class="about">
+                <h3>Player Book</h3>
+                <br>
+                <p>
+                This game is meant to be played using both the desktop and the book provided.<br><br>
+                Draw or write in the book when prompted by the game.<br><br>
+                There will be a set timer for you to complete the prompt in the book 
+                before continuing the game.<br><br>
+                After completing the game, you may either take the book with you, or leave it
+                behind for others to enjoy.</p>
+            </div>
+            <div class="about">
+                <h3>Text-Based Interaction</h3>
+                <br>
+                <p style="text-align: center;">Type short 2-3 word commands and press the enter key.<br></p>
+                <p style="text-align: center;">Commands may include:</p>
+                <li style="text-align: left; margin-left: 30%;">go north</li>
+                <li style="text-align: left; margin-left: 30%;">go south</li>
+                <li style="text-align: left; margin-left: 30%;">go east</li>
+                <li style="text-align: left; margin-left: 30%;">go west</li>
+                <li style="text-align: left; margin-left: 30%;">look</li>
+                <li style="text-align: left; margin-left: 30%;">examine ___</li>
+                <li style="text-align: left; margin-left: 30%;">open ___</li>
+                <li style="text-align: left; margin-left: 30%;"> pick up ___</li>
+                <br>
+                <p>Words that are bolded and capitalized may be interacted with and used in a command.</p>
+                <p>Type 'help' to see what commands can be used within a room.</p>
+            </div>
         </div>
     </div>
     <button id="menu-button">?</button>
@@ -199,6 +318,6 @@
     </div>
     <script src="church.js"></script>
     <script src="lakeparser.js"></script>
-    <script src="menu.js"></script>
+    <script src="menu_popup.js"></script>
 </body>
 </html>
