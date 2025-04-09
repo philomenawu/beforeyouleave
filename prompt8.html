@@ -11,19 +11,18 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url("art/Prompt8.png");
-            background-size: 70%;
-            background-position: left;
-            background-color: rgb(255, 255, 255);
-            color: black;
+            background-image: url("art/prompt4.png");
+            background-size: 80%;
+            background-position: right;
+            background-color: rgb(37, 74, 194);
+            color: rgb(255, 255, 255);
             font-size: 12pt;
         }
         .title {
             font-size: 24pt;
-            padding-bottom: 20px;
             position: relative;
             text-align: center;
-            color: rgb(37, 74, 194);
+            color: rgb(255, 255, 255);
         }
         .page-container {
             display: flex;
@@ -41,14 +40,13 @@
             all: unset;
             padding: 10px 15px;
             font-size: 28px;
-            background-color: rgb(255, 255, 255);
+            background-color: transparent;
             display: none;
             cursor: pointer;
             height: 50px;
         }
         .prompt {
             width: 25vw;
-            height: 45vh;
             font-size: 12pt;
             background-color: transparent;
             text-align: center;
@@ -56,11 +54,10 @@
             align-items: center;
             display: flex;
             flex-direction: column;
-            white-space: nowrap;
         }
         #timer {
             font-size: 12pt;
-            color: rgb(37, 74, 194);
+            color: rgb(255, 255, 255);
         }
         .next {
             width: 15%;
@@ -70,18 +67,17 @@
     </style>
 </head>
 <body id="body">
+    <!-- <div class="outer-container"> -->
         <div class="page-container">
         <div class="container">
             <div class="prompt">
-                <p class="title">Before you <span style="color: rgba(37, 74, 194, 0.419)"><i>leave</i>...</span></p>
-                <p>Turn to page 21 and describe a dream you had as a kid.</p>
-                <br>
-                <br>
+                <p class="title">Before you <span style="color: rgba(255, 255, 255, 0.419)"><i>leave</i>...</span></p>
+                <p class="prompt">Turn to page 21 and describe a dream you had as a kid.</p><br>
                 <p id="timer">60</p>
             </div>
             <br>
             <br>
-            <a href="home.html"><button><img class="next" src="art/nextbuton.png"></button></a>
+            <a href="wander2.html"><button><img class="next" src="art/whitenext.png"></button></a>
         </div>
     </div> 
 
@@ -102,6 +98,8 @@
                 document.querySelector("button").style.display = "block";
             }
         }
+
+        // Start the timer when the page loads
         window.onload = updateTimer;
     </script>
 </body>
