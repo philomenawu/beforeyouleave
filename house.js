@@ -1,7 +1,7 @@
 // Inside rooms
 const gameData = {
     start: {
-        description: `You're in a dark room. There's a telephone ringing. There's a staircase leading down <i>south</i>to the shop on the first floor.`,
+        description: `You're in a dark room. There's a telephone ringing. There's a staircase leading down <i>south</i> to the shop on the first floor.`,
         commands: {
             'start': { 
                         output: `You rub the sleep from your eyes as you're pulled from a dream you already forgot. You can hear the <span style="color: white; font-weight: bold;">TELEPHONE</span> across the room loudly ringing. 
@@ -65,7 +65,7 @@ const gameData = {
             'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back rest and bottom seat made of woven cane.`},
 
             'help': { 
-                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine item, pick up item.`
+                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine [item], pick up [item].`
                     }
         }
     },
@@ -128,7 +128,7 @@ const gameData = {
 
             'wake up wife':{ output: `You think it would be best for your physical and mental health to let her sleep after seeing how exhausted she looked when you arrived home.`},
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go east, go west, examine item, wake up wife.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, go west, examine [item], wake up wife.`}
         }
     },
 
@@ -163,7 +163,7 @@ const gameData = {
                     into the horizon, blending with the paint-splattered night sky.`
                 },
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go west, examine item, wake up children.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go west, examine [item], wake up children.`}
         }
     },
 
@@ -257,8 +257,7 @@ const gameData = {
 
             'pet Jackie': {output: `Jackie wags his tail and playfully bites at your fingers while you rub his back.`},
 
-            'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, pick up item.<br>
-                <i>HINT: Examine an item in order to read it or give it a closer inspection.</i>`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, examine [item], open [item], pick up [item], pet [item].<br>`}
         }
     },
 
@@ -284,10 +283,9 @@ const gameData = {
 
             'examine door': { output: `The door leads out to the main road. You should <i>open</i> the door to leave the house.`},
 
-            'open door': { output: `You really should answer the telephone call before you leave the house.`},
+            'open door': { output: `You really should answer the telephone call upstairs before you leave the house.`},
 
-            'help': { output: `VALID COMMAND EXAMPLES: look, go north, go south, go east, go west, examine item, pick up item, open item.<br>
-                <i>HINT: Examine an item in order to read it or give it a closer inspection.</i>`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go north, examine [item], open [item].<br>`}
         }
 
     },
