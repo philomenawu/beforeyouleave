@@ -24,11 +24,6 @@
             position: relative;
             text-align: center;
             color: rgb(37, 74, 194);
-            /* top: 100px; */
-            /* left: 30px; */
-            /* margin: 0;
-            padding: 5;
-            z-index: -100; */
         }
         .page-container {
             display: flex;
@@ -47,17 +42,10 @@
             padding: 10px 15px;
             font-size: 28px;
             background-color: rgb(255, 255, 255);
-            /* border: 2px solid #000000; */
-            /* color: rgb(0, 0, 0); */
             display: none;
             cursor: pointer;
             height: 50px;
         }
-        /* button:hover,
-        button:focus{
-            background-color: white;
-            color: black;
-        } */
         .prompt {
             width: 25vw;
             height: 45vh;
@@ -78,17 +66,10 @@
             width: 15%;
             height: auto;
         }
-        /* .outer-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            border: 2px solid red;
-        } */
 
     </style>
 </head>
 <body id="body">
-    <!-- <div class="outer-container"> -->
         <div class="page-container">
         <div class="container">
             <div class="prompt">
@@ -97,17 +78,15 @@
                 <br>
                 <br>
                 <p id="timer">60</p>
-                <!-- <p><i>(1 minute)</i></p> -->
             </div>
             <br>
             <br>
             <a href="outside.html"><button><img class="next" src="art/nextbuton.png"></button></a>
         </div>
     </div> 
-<!-- </div> -->
 
     <script>
-        let timeLeft = 60; // 60 seconds
+        let timeLeft = 60;
         let timerElement = document.getElementById("timer");
         let button = document.getElementById("nextButton");
 
@@ -120,11 +99,9 @@
                 timeLeft--;
                 setTimeout(updateTimer, 1000);
             } else {
-                document.querySelector("button").style.display = "block"; // Show the button when timer ends
+                document.querySelector("button").style.display = "block";
             }
         }
-
-        // Start the timer when the page loads
         window.onload = updateTimer;
     </script>
 </body>

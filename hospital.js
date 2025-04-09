@@ -96,7 +96,7 @@ const gameData = {
                 You should go back to the </i> <span style="font-weight: bold;">CORRIDOR</span>.`,
                 action: function () {
                     document.getElementById('topimg').src="art/closedwindow.png";
-                    gameState.windowClosed = true; // Flag set to true after closing the window
+                    gameState.windowClosed = true;
 
                     gameData.corridor.description = `You stumble back as you suddenly notice a pale faint <span style="font-weight: bold;">GHOST</span> towering over you on the opposite side of the room.
                     Where you imagine its head to be almost reaches the ceiling. You try to contain your shock at its towering stature.
@@ -181,7 +181,7 @@ const gameData = {
 };
 
 window.onload = function() {
-    const textOutput = document.getElementById('textoutput'); // Adjust to match your actual output area ID
+    const textOutput = document.getElementById('textoutput');
     if (textOutput) {
         textOutput.innerHTML += `<p>${gameData.start.description}</p>`;
     }

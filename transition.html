@@ -80,27 +80,21 @@
     </style>
 </head>
 <body id="body">
-    <!-- <div class="outer-container"> -->
         <div class="page-container">
         <div class="container">
             <div class="prompt">
                 <p class="title">Before you <span style="color: rgba(37, 74, 194, 0.419)"><i>leave</i>...</span></p>
                 <p class="prompt">Turn to page 5 and draw your childhood home.</p><br>
-                <!-- <br>
-                <br> -->
                 <p id="timer">60</p>
-                <!-- <p><i>(1 minute)</i></p> -->
             </div>
             <br>
             <br>
-            <!-- <p><strong><i><span style="color: rgb(37, 74, 194);">page 2</span></i></strong></p> -->
             <a href="outside.html"><button><img class="next" src="art/nextbuton.png"></button></a>
         </div>
     </div> 
-<!-- </div> -->
 
     <script>
-        let timeLeft = 60; // 60 seconds
+        let timeLeft = 60;
         let timerElement = document.getElementById("timer");
         let button = document.getElementById("nextButton");
 
@@ -113,7 +107,7 @@
                 timeLeft--;
                 setTimeout(updateTimer, 1000);
             } else {
-                document.querySelector("button").style.display = "block"; // Show the button when timer ends
+                document.querySelector("button").style.display = "block";
             }
         }
 

@@ -11,9 +11,6 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            /* background-image: url("art/lake3.png");
-            background-size: 80%;
-            background-position: center; */
             background-color: rgb(255, 255, 255);
             color: black;
             font-size: 12pt;
@@ -24,11 +21,6 @@
             position: relative;
             text-align: center;
             color: rgb(37, 74, 194);
-            /* top: 100px; */
-            /* left: 30px; */
-            /* margin: 0;
-            padding: 5;
-            z-index: -100; */
         }
         .page-container {
             display: flex;
@@ -47,17 +39,9 @@
             padding: 10px 15px;
             font-size: 28px;
             background-color: rgb(255, 255, 255);
-            /* border: 2px solid #000000; */
-            /* color: rgb(0, 0, 0); */
-            /* display: none; */
             cursor: pointer;
             height: 50px;
         }
-        /* button:hover,
-        button:focus{
-            background-color: white;
-            color: black;
-        } */
         .prompt {
             width: 25vw;
             height: 45vh;
@@ -79,12 +63,6 @@
             height: auto;
             z-index: 9999;
         }
-        /* .outer-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            border: 2px solid red;
-        } */
          img {
             width: 80vw;
             height: auto;
@@ -106,7 +84,7 @@
     
 
     <script>
-        let timeLeft = 60; // 60 seconds
+        let timeLeft = 60;
         let timerElement = document.getElementById("timer");
         let button = document.getElementById("nextButton");
 
@@ -119,7 +97,7 @@
                 timeLeft--;
                 setTimeout(updateTimer, 1000);
             } else {
-                document.querySelector("button").style.display = "block"; // Show the button when timer ends
+                document.querySelector("button").style.display = "block";
             }
         }
 

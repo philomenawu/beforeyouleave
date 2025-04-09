@@ -20,15 +20,9 @@
         }
         .title {
             font-size: 24pt;
-            /* padding-bottom: 20px; */
             position: relative;
             text-align: center;
             color: rgb(255, 255, 255);
-            /* top: 100px; */
-            /* left: 30px; */
-            /* margin: 0;
-            padding: 5;
-            z-index: -100; */
         }
         .page-container {
             display: flex;
@@ -47,20 +41,12 @@
             padding: 10px 15px;
             font-size: 28px;
             background-color: transparent;
-            /* border: 2px solid #000000; */
-            /* color: rgb(0, 0, 0); */
             display: none;
             cursor: pointer;
             height: 50px;
         }
-        /* button:hover,
-        button:focus{
-            background-color: white;
-            color: black;
-        } */
         .prompt {
             width: 25vw;
-            /* height: 45vh; */
             font-size: 12pt;
             background-color: transparent;
             text-align: center;
@@ -68,7 +54,6 @@
             align-items: center;
             display: flex;
             flex-direction: column;
-            /* line-height: .25; */
         }
         #timer {
             font-size: 12pt;
@@ -78,12 +63,6 @@
             width: 15%;
             height: auto;
         }
-        /* .outer-container {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            border: 2px solid red;
-        } */
 
     </style>
 </head>
@@ -95,17 +74,15 @@
                 <p class="title">Before you <span style="color: rgba(255, 255, 255, 0.419)"><i>leave</i>...</span></p>
                 <p class="prompt">Turn to page 11 and describe a habit you grew out of.</p><br>
                 <p id="timer">60</p>
-                <!-- <p><i>(1 minute)</i></p> -->
             </div>
             <br>
             <br>
             <a href="wander2.html"><button><img class="next" src="art/whitenext.png"></button></a>
         </div>
     </div> 
-<!-- </div> -->
 
     <script>
-        let timeLeft = 60; // 60 seconds
+        let timeLeft = 60;
         let timerElement = document.getElementById("timer");
         let button = document.getElementById("nextButton");
 
@@ -118,7 +95,7 @@
                 timeLeft--;
                 setTimeout(updateTimer, 1000);
             } else {
-                document.querySelector("button").style.display = "block"; // Show the button when timer ends
+                document.querySelector("button").style.display = "block";
             }
         }
 

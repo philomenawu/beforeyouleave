@@ -4,18 +4,8 @@ let ctx = canvas.getContext('2d');
 let x = canvas.width / 2;
 let y = 600;
 
-// // Circle (character)
-// function drawCharacter() {
-//   ctx.clearRect(0, 0, canvas.width, canvas.height);
-//   ctx.beginPath();
-//   ctx.arc(x, y, 5, 0, Math.PI * 2);
-//   ctx.fillStyle = 'black';
-//   ctx.fill();
-//   ctx.closePath();
-// }
-
 let character = new Image();
-character.src = 'art/player.png'; // Replace with your image path
+character.src = 'art/player.png';
 
 character.onload = function () {
   drawCharacter();
@@ -23,7 +13,7 @@ character.onload = function () {
 
 function drawCharacter() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.drawImage(character, x - 15, y - 15, 20, 40); // Adjust size and position if needed
+  ctx.drawImage(character, x - 15, y - 15, 20, 40);
 }
 
 // Function to highlight a button
@@ -37,9 +27,6 @@ function highlightButton(buttonId) {
   // Add active class to the clicked or pressed button
   document.getElementById(buttonId).classList.add('active');
 }
-
-// const noiseContainer = document.getElementById("noise");
-// const noises = ["rustle", "stick", "crunch", "snap", "bush", "bramble", "leaves", "rock", "branch", "bug"];
 
 // Event listener for arrow keys
 document.addEventListener("keydown", (event) => {

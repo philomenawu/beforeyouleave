@@ -7,20 +7,8 @@ let y = 545;
 let background = new Image();
 background.src = 'art/wander.png';
 
-// let hospitalBackground = new Image();
-// hospitalBackground.src = 'art/hospitalonly.png'; 
-
 let churchBackground = new Image();
 churchBackground.src = 'art/churchonly.png';
-
-// let tigerBackground = new Image();
-// tigerBackground.src = 'art/tigeronly.png';
-
-// let lakeBackground = new Image();
-// lakeBackground.src = 'art/lakeonly.png';
-
-// let pagodaBackground = new Image();
-// pagodaBackground.src = 'art/pagodaonly.png';
 
 let character = new Image();
 character.src = 'art/player.png';

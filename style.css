@@ -8,9 +8,6 @@ body {
     align-items: center;
     justify-content: center;
     background-repeat: no-repeat;    
-    /* font-family: "Bentham", serif;
-    font-weight: 400;
-    font-style: normal; */
     font-family: "Alice", serif;
     font-weight: 400;
     font-style: normal;
@@ -20,10 +17,6 @@ body {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
-
-/* p {
-    max-width: 90ch;
-} */
 
 input[type="text"]
 {
@@ -125,13 +118,8 @@ input[type="text"]
     width: 30vw;
     padding: 20px;
     background-color: transparent;
-    /* background-color: rgb(0, 65, 150); */
-    /* background-color: #ffffff; */
-    /* border: 2px solid rgb(0, 0, 0); */
     justify-content: center;
     line-height: 1.5;
-    /* align-items: center; */
-    /* text-align: center; */
 }
 
 #textoutput {
@@ -143,7 +131,6 @@ input[type="text"]
     margin-right: 20px;
     padding-right: 15px;
     padding-left: 25px;
-    /* color: blue; */
 }
 
 #textoutput > :first-child {
@@ -171,7 +158,6 @@ input[type="text"]
     background: transparent;
     outline: none;
     border: none;
-    /* border: 0.5px dashed rgb(255, 255, 255); */
     width: 100%;
     color: rgb(255, 255, 255);
 }
@@ -190,17 +176,6 @@ input[type="text"]
     padding: 20px;
     flex-direction: column;
 }
-
-/* Dialogue Scene */
-/* #dialogue-container2 {
-    position: absolute;
-    background-color: #000000;
-    display: flex; 
-    z-index: 999;
-    text-align: center; 
-    justify-content: center;
-    align-items: center;
-} */
 
 #text-container {
     height: 65vh;
@@ -227,22 +202,13 @@ input[type="text"]
     all: unset;
     margin-top: auto;
     padding: 10px 15px;
-    /* font-size: 16px; */
     display: none;
     text-align: center;
     justify-content: center;
     align-items: center;
     background-color: transparent;
-    /* background-color: #ffffff;
-    border: 2px solid rgb(0, 0, 0);
-    color: rgb(0, 0, 0); */
     cursor: pointer;
 }
-
-/* #next-button:hover {
-    background-color: rgb(0, 81, 255);
-    color: black;
-} */
 
 #next-button2 {
     position: absolute;
@@ -293,24 +259,24 @@ input[type="text"]
 
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-    width: 4px; /* Width of the scrollbar */
+    width: 4px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0); /* Light transparent background */
+    background: rgba(255, 255, 255, 0);
 }
 
 /* Thumb */
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0); /* White thumb */
+    background: rgba(255, 255, 255, 0);
     border-radius: 10px;
-    border: 1px solid rgb(255, 255, 255); /* Matches your body bg */
+    border: 1px solid rgb(255, 255, 255);
 }
 
 /* Thumb hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255); /* Accent color */
+    background: rgb(255, 255, 255);
 }
 
 @media (min-width: 769px) {

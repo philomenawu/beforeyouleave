@@ -122,7 +122,7 @@ const gameData = {
 };
 
 window.onload = function() {
-    const textOutput = document.getElementById('textoutput'); // Adjust to match your actual output area ID
+    const textOutput = document.getElementById('textoutput');
     if (textOutput) {
         textOutput.innerHTML += `<p>${gameData.start.description}</p>`;
     }

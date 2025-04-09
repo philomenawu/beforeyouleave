@@ -295,7 +295,7 @@ const gameData = {
     };
 
     window.onload = function() {
-        const textOutput = document.getElementById('textoutput'); // Adjust this to your actual output area ID
+        const textOutput = document.getElementById('textoutput');
         if (textOutput) {
             textOutput.innerHTML += `<p>${gameData.start.commands['start'].output}</p>`;
         }
