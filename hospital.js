@@ -182,7 +182,7 @@ const gameData = {
                     });
                 }, 0);
             }},
-        'examine door': {output: `You turn towards the door and notice that it's now slightly ajar. Rather than fear, you're filled with curiosity and remorse.
+        'examine door': {nextRoom: 'exit', output: `You turn towards the door and notice that it's now slightly ajar. Rather than fear, you're filled with curiosity and remorse.
             You've crossed paths with this lost soul before. You just know it. You know them like a name on the tip of your tongue. It's beckoning you to follow...
             <i>you should leave the hospital...</i>`,
             action: function () {
@@ -194,6 +194,19 @@ const gameData = {
                 }, 0);
               }
         },
+        'help': { output: `VALID COMMANDS: look, examine door`,
+            action: function () {
+                document.getElementById('topimg').src="art/door.png";
+                setTimeout(() => {
+                    document.querySelectorAll('#textoutput span').forEach(span => {
+                        span.style.color = "white";
+                    });
+                }, 0);
+              }
+        }
+        }
+    },
+    exit: {
         'leave hospital': {output: ``,
             action: function () {
                 window.location.href = 'prompt3.html';
@@ -204,7 +217,7 @@ const gameData = {
                 }, 0);
         }
         },
-        'help': { output: `VALID COMMANDS: look, examine door, leave hospital`,
+        'help': { output: `VALID COMMANDS: leave hospital`,
             action: function () {
                 document.getElementById('topimg').src="art/door.png";
                 setTimeout(() => {
@@ -213,7 +226,6 @@ const gameData = {
                     });
                 }, 0);
               }
-        }
         }
     }
 };
