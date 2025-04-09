@@ -98,8 +98,8 @@ input[type="text"]
     text-decoration: none;
 }.menuclose-btn {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 125px;
+    right: 125px;
     color: rgb(255, 255, 255);
     font-size: 24px;
     font-weight: bold;

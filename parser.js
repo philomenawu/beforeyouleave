@@ -118,7 +118,7 @@ function parseInput() {
                         window.location.href = 'transition.html';
                     };
                 }
-                gameData.start.description = 'You\'re in a dark room. There\'s a staircase leading down <i>south</i>to the shop on the first floor. The room is silent now.';
+                gameData.start.description = 'You\'re in a dark room. There\'s a staircase leading down <i>south</i> to the shop on the first floor. The room is silent now.';
                 updateGameOutput(command.output, userInput);
                 startDialogueScene();
             }
