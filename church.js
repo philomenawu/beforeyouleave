@@ -85,7 +85,16 @@ const gameData = {
                     }, 0);
                 }
             },
-            'help': { output: `VALID COMMANDS: look, examine ghost, examine pews, examine candles, go to pew`}
+            'help': { output: `VALID COMMANDS: look, examine ghost, examine pews, examine candles, go to pew`,
+                action: function () {
+                    document.getElementById('topimg').src="art/door.png";
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
+                  }
+            }
         }
     },
     candles: {
@@ -136,7 +145,16 @@ const gameData = {
                 }, 0);
               }
         },
-        'help': { output: `VALID COMMANDS: look, light candle, go to pew`}
+        'help': { output: `VALID COMMANDS: look, light candle, go to pew`,
+            action: function () {
+                document.getElementById('topimg').src="art/door.png";
+                setTimeout(() => {
+                    document.querySelectorAll('#textoutput span').forEach(span => {
+                        span.style.color = "white";
+                    });
+                }, 0);
+              }
+        }
     }},
     pew: {
         description: `The seat is cold. You look towards the altar. A white cloth is drapped over the table. A large wooden cross hangs above it.
@@ -193,7 +211,16 @@ const gameData = {
             'leave church': {action: function() {
                 window.location.href = 'prompt4.html';
             }},
-            'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles, open eyes, leave church`}
+            'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles, open eyes, leave church`,
+                action: function () {
+                    document.getElementById('topimg').src="art/door.png";
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
+                  }
+            }
         }
     }
 };

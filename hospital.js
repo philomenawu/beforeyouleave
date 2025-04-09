@@ -22,7 +22,16 @@ const gameData = {
                 }, 0);
                 }
             },
-            'help': { output: `VALID COMMANDS: look, enter hospital`}
+            'help': { output: `VALID COMMANDS: look, enter hospital`,
+                action: function () {
+                    document.getElementById('topimg').src="art/door.png";
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
+                  }
+            }
         }
     },
     corridor: {
@@ -72,7 +81,16 @@ const gameData = {
                     }, 0);
                 }
             },
-            'help': { output: `VALID COMMANDS: look, examine corridor, examine windows, examine [?]`}
+            'help': { output: `VALID COMMANDS: look, examine corridor, examine windows, examine [?]`,
+                action: function () {
+                    document.getElementById('topimg').src="art/door.png";
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
+                  }
+            }
         }
     },
     window: {
@@ -140,7 +158,16 @@ const gameData = {
                     }, 0);
                 }
             },
-            'help': { output: `VALID COMMANDS: look, close window, go to corridor`}
+            'help': { output: `VALID COMMANDS: look, close window, go to corridor`,
+                action: function () {
+                    document.getElementById('topimg').src="art/door.png";
+                    setTimeout(() => {
+                        document.querySelectorAll('#textoutput span').forEach(span => {
+                            span.style.color = "white";
+                        });
+                    }, 0);
+                  }
+            }
         }
     },
     door: {
@@ -177,7 +204,16 @@ const gameData = {
                 }, 0);
         }
         },
-        'help': { output: `VALID COMMANDS: look, examine door, leave hospital`}
+        'help': { output: `VALID COMMANDS: look, examine door, leave hospital`,
+            action: function () {
+                document.getElementById('topimg').src="art/door.png";
+                setTimeout(() => {
+                    document.querySelectorAll('#textoutput span').forEach(span => {
+                        span.style.color = "white";
+                    });
+                }, 0);
+              }
+        }
         }
     }
 };
