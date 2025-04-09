@@ -65,7 +65,8 @@ const gameData = {
             'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back rest and bottom seat made of woven cane.`},
 
             'help': { 
-                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine [item], pick up [item].`
+                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine tiger, examine television, examine floor, examine bench
+                         pick up glasses, pick up telephone.`
                     }
         }
     },
@@ -128,7 +129,7 @@ const gameData = {
 
             'wake up wife':{ output: `You think it would be best for your physical and mental health to let her sleep after seeing how exhausted she looked when you arrived home.`},
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go east, go west, examine [item], wake up wife.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, go west, examine journal, examine mirror, examine wife, wake up wife.`}
         }
     },
 
@@ -163,7 +164,7 @@ const gameData = {
                     into the horizon, blending with the paint-splattered night sky.`
                 },
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go west, examine [item], wake up children.`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go west, examine window, examine children, wake up children.`}
         }
     },
 
@@ -257,7 +258,8 @@ const gameData = {
 
             'pet Jackie': {output: `Jackie wags his tail and playfully bites at your fingers while you rub his back.`},
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go east, examine [item], open [item], pick up [item], pet [item].<br>`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, examine recipe, examine lists, examine cabinet, examine tommy, examine jackie
+                pet tommy, pet jackie, open cabinet, pick up flashlight.`}
         }
     },
 
@@ -285,7 +287,7 @@ const gameData = {
 
             'open door': { output: `You really should answer the telephone call upstairs before you leave the house.`},
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go north, examine [item], open [item].<br>`}
+            'help': { output: `VALID COMMANDS IN ROOM: look, go north, examine door, open door.`}
         }
 
     },

@@ -22,8 +22,7 @@ const gameData = {
                 }, 0);
                 }
             },
-            'help': { output: `VALID COMMAND EXAMPLES: look, examine [item], go to [].<br>
-                <i>HINT: Look around to search for clues and see what items can be interacted with.</i>`}
+            'help': { output: `VALID COMMANDS: look, enter hospital`}
         }
     },
     corridor: {
@@ -72,7 +71,8 @@ const gameData = {
                         });
                     }, 0);
                 }
-            }
+            },
+            'help': { output: `VALID COMMANDS: look, examine corridor, examine windows, examine [?]`}
         }
     },
     window: {
@@ -139,7 +139,8 @@ const gameData = {
                         });
                     }, 0);
                 }
-            }
+            },
+            'help': { output: `VALID COMMANDS: look, close window, go to corridor`}
         }
     },
     door: {
@@ -175,7 +176,8 @@ const gameData = {
                     });
                 }, 0);
         }
-        }
+        },
+        'help': { output: `VALID COMMANDS: look, examine door, leave hospital`}
         }
     }
 };

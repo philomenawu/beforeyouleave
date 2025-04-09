@@ -25,8 +25,7 @@ const gameData = {
                 }, 0);
                 }
             },
-            'help': { output: `VALID COMMAND EXAMPLES: look, examine [item], go to [].<br>
-                <i>HINT: Look around to search for clues and see what items can be interacted with.</i>`}
+            'help': { output: `VALID COMMANDS: look, examine church, enter church`}
         }
     },
     nave: {
@@ -85,7 +84,8 @@ const gameData = {
                         });
                     }, 0);
                 }
-            }
+            },
+            'help': { output: `VALID COMMANDS: look, examine ghost, examine pews, examine candles, go to pew`}
         }
     },
     candles: {
@@ -135,7 +135,8 @@ const gameData = {
                     });
                 }, 0);
               }
-        }
+        },
+        'help': { output: `VALID COMMANDS: look, light candle, go to pew`}
     }},
     pew: {
         description: `The seat is cold. You look towards the altar. A white cloth is drapped over the table. A large wooden cross hangs above it.
@@ -191,7 +192,8 @@ const gameData = {
                 }},
             'leave church': {action: function() {
                 window.location.href = 'prompt4.html';
-            }}
+            }},
+            'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles, open eyes, leave church`}
         }
     }
 };
