@@ -51,7 +51,7 @@ document.addEventListener("keydown", (event) => {
         break;
     case "ArrowDown":
         if (y > 450) {
-            window.location.href = "home.html";
+            window.location.href = "prompt8.html";
             }
             y += 30;
             highlightButton('down-button');
