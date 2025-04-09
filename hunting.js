@@ -39,7 +39,7 @@ const gameData = {
                 <i>ak kui</i>...<br>
                 Suddenly, you hear your name being uttered.<br>
                 The voices sound eerily like your children calling out to you. Growing up in the mountains, you were always told to never
-                say your name outloud,for spirits can steal voices and lure you into another world. <br>You stand still and stay quiet.`},
+                say your name outloud, for spirits can steal voices and lure you into another world. <br>You stand still and stay quiet.`},
             'examine ghost': { output: `The flames crackle and wildly dance with the breeze, taking the shape of the ghost you've been following.
                 Except now it's even smaller, appearing as a young child, dancing wild and freely with the wind but chained to the charcoal and wood
                 that keeps it alive. You can't help but feel sorry.`},
