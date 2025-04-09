@@ -20,65 +20,13 @@ let actionButtonLink = document.getElementById("actionButtonLink");
 let actionButton = document.getElementById("actionButton");
 
 function updateButton() {
-  actionButton.style.display = "none";  // Hide button by default
-
-  // if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
-  //     actionButton.innerText = "Explore Hospital";
-  //     actionButton.style.display = "block";
-  //     actionButtonLink.href = "hospital.html";
-  // } 
+  actionButton.style.display = "none";
   if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
       actionButton.innerText = "Explore Church";
       actionButton.style.display = "block";
       actionButtonLink.href = "church.html";
   } 
 }
-
-// function updateButton() {
-//   actionButton.style.display = "none";
-
-//   if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
-//       actionButton.innerText = "Explore Hospital";
-//       actionButton.style.display = "block";
-//       actionButtonLink.href = "hospital.html";
-//       actionButton.style.left = `${canvas.offsetLeft + x - 50}px`;
-//       actionButton.style.top = `${canvas.offsetTop + y - 50}px`;
-//   } 
-//   else if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
-//       actionButton.innerText = "Explore Church";
-//       actionButton.style.display = "block";
-//       actionButtonLink.href = "church.html";
-//       actionButton.style.left = `${canvas.offsetLeft + x - 50}px`;  // Adjust for church position
-//       actionButton.style.top = `${canvas.offsetTop + y - 50}px`;
-//   } 
-// }
-
-// function updateButton() {
-//     actionButton.style.display = "none";
-
-//     if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
-//         actionButton.innerText = "Explore Hospital";
-//         actionButton.style.display = "block";
-//         actionButtonLink.href = "hospital.html";
-//     } 
-//     else if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
-//         actionButton.innerText = "🔒";
-//         actionButton.style.display = "hidden";
-//     } 
-//     else if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
-//         actionButton.innerText = "Explore Church";
-//         actionButton.style.display = "block";
-//         actionButtonLink.href = "church.html";
-//     }
-//     else if (x < 500 && y < 1000 && y > 500) {
-//         actionButton.innerText = "🔒";
-//         actionButton.style.display = "hidden";
-//     }
-//     else if (x < 500 && y < 2000 && y > 1000) {
-//         actionButton.innerText = "🔒";
-//         actionButton.style.display = "hidden";
-//     }
-// }
 
 actionButton.addEventListener('click', () => {
   if (actionButtonLink.href) {
@@ -90,22 +38,9 @@ actionButton.addEventListener('click', () => {
 function drawScene() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
-  // Choose background based on position
-  // if (x > canvas.width - 500 && x < canvas.width - 50 && y < 500) {
-  //   ctx.drawImage(hospitalBackground, 0, 0, canvas.width, canvas.height);
-  // } 
-  // else if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
-  //   ctx.drawImage(pagodaBackground, 0, 0, canvas.width, canvas.height);
-  // } 
   if (x > canvas.width - 1000 && x < canvas.width - 600 && y < 500) {
     ctx.drawImage(churchBackground, 0, 0, canvas.width, canvas.height);
   }
-  // else if (x < 500 && y < 1000 && y > 500) {
-  //   ctx.drawImage(tigerBackground, 0, 0, canvas.width, canvas.height);
-  // }
-  // else if (x < 500 && y < 2000 && y > 1000) {
-  //   ctx.drawImage(lakeBackground, 0, 0, canvas.width, canvas.height);
-  // }
   else {
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
   }
@@ -123,7 +58,6 @@ document.addEventListener("keydown", (event) => {
       break;
     case "ArrowUp":
       if (y < 280) {
-        // window.location.href = "outside2.html";
       } else {
         y -= 30;
       }
