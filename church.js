@@ -87,7 +87,6 @@ const gameData = {
             },
             'help': { output: `VALID COMMANDS: look, examine ghost, examine pews, examine candles, go to pew`,
                 action: function () {
-                    document.getElementById('topimg').src="art/door.png";
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
                             span.style.color = "white";
@@ -147,7 +146,6 @@ const gameData = {
         },
         'help': { output: `VALID COMMANDS: look, light candle, go to pew`,
             action: function () {
-                document.getElementById('topimg').src="art/door.png";
                 setTimeout(() => {
                     document.querySelectorAll('#textoutput span').forEach(span => {
                         span.style.color = "white";
@@ -213,7 +211,6 @@ const gameData = {
             }},
             'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles, open eyes, leave church`,
                 action: function () {
-                    document.getElementById('topimg').src="art/door.png";
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
                             span.style.color = "white";
