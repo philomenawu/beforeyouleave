@@ -128,6 +128,9 @@ function parseInput() {
             gameState.currentRoom = command.nextRoom;
             updateGameOutput(command.output, userInput);
             updateGameOutput(gameData[command.nextRoom].description);
+            if (command.action) {
+                command.action();
+            }
         }
         else {
             updateGameOutput(command.output, userInput);

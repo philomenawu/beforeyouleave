@@ -13,11 +13,23 @@ const gameData = {
 
             'go north': { output: `You can not move north from here.`},
 
-            'go south': { nextRoom: 'shop', output: `You move south and walk down the stairs into the shop.` },
+            'go south': { nextRoom: 'shop', output: `You move south and walk down the stairs into the shop.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/downstairs.png')";
+                }
+             },
 
-            'go east': { nextRoom: 'bedroom', output: `You move east and quietly walk into your <span style="color: white; font-weight: bold;">bedroom</span>.` },
+            'go east': { nextRoom: 'bedroom', output: `You move east and quietly walk into your <span style="color: white; font-weight: bold;">bedroom</span>.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/masterbedroom.png')";
+                }
+             },
 
-            'go west': { nextRoom: 'diningroom', output: `You move west and walk into the <span style="color: white; font-weight: bold;">dining room</span>.` },
+            'go west': { nextRoom: 'diningroom', output: `You move west and walk into the <span style="color: white; font-weight: bold;">dining room</span>.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/diningroom.png')";
+                }
+             },
 
             'pick up glasses': {
                         output: `You bend down and pick up your <span style="color: white; font-weight: bold;">GLASSES</span>. Their bold black frames make them rather hard to lose, and they've lasted you almost a decade by now 
@@ -80,9 +92,17 @@ const gameData = {
 
             'go south': { output: `You can not move south from here.`},
 
-            'go east': { nextRoom: 'children', output: `You move east and quietly walk into your children's bedroom.`},
+            'go east': { nextRoom: 'children', output: `You move east and quietly walk into your children's bedroom.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/childrenbedroom.png')";
+                }
+            },
 
-            'go west': { nextRoom: 'start', output: `You move west and walk into the living room.`},
+            'go west': { nextRoom: 'start', output: `You move west and walk into the living room.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/couch.png')";
+                }
+            },
 
             'look': { 
                         output: `Your wife is soundly asleep on the bed. A <span style="color: white; font-weight: bold;">MIRROR</span> hangs by the bedroom door. There's a small nightstand next to your side of the bed 
@@ -136,7 +156,7 @@ const gameData = {
     children: {
         description: `All three <span style="color: white; font-weight: bold;">CHILDREN</span> share a bedroom at the end of the hallway. A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of their beds, 
         giving a view of the mountainous village. The full moon can be seen clearly from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.
-        The master bedroom is back <i>east</i>.`,
+        The master bedroom is back <i>west</i>.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
 
@@ -144,7 +164,11 @@ const gameData = {
 
             'go east': { output: `You've reached the end of the hallway and can not move farther east from here.`},
 
-            'go west': { nextRoom: 'bedroom', output: `You move west and walk into your bedroom.`},
+            'go west': { nextRoom: 'bedroom', output: `You move west and walk into your bedroom.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/masterbedroom.png')";
+                }
+            },
 
             'look': { 
                     output: `In the bed to the farthest right of the room is your oldest daughter who just turned thirteen, then your middle child only two years younger,
@@ -178,9 +202,17 @@ const gameData = {
 
             'go south': { output: `You can not move south from here. The stairs to go down are back in the living room.`}, 
 
-            'go east': { nextRoom: 'start', output: `You move east and walk into the living room.` },
+            'go east': { nextRoom: 'start', output: `You move east and walk into the living room.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/couch.png')";
+                }
+             },
 
-            'go west': { nextRoom: 'kitchen', output: `You west and walk into the kitchen.`},
+            'go west': { nextRoom: 'kitchen', output: `You west and walk into the kitchen.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/kitchen.png')";
+                }
+            },
 
             'look': { 
                     output: `At night, the dining room serves as a study space for your children. With the rolling blackouts throughout the village, you usually find them studying by 
@@ -205,7 +237,11 @@ const gameData = {
 
             'go south': { output: `You can not move south from here. The stairs to go down are back in the living room.`},
 
-            'go east': { nextRoom: 'diningroom', output: `You move east and walk into the dining room.`},
+            'go east': { nextRoom: 'diningroom', output: `You move east and walk into the dining room.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/diningroom.png')";
+                }
+            },
 
             'go west': { output: `You've reached the end of the hallway and can not move farther west from here.`},
 
@@ -269,7 +305,11 @@ const gameData = {
         <span style="color: white; font-weight: bold;">DOOR</span> leading outside at the front of the shop.`,
 
         commands: {
-            'go north': { nextRoom: 'start', output: `You move north and walk up the stairs to the living room.`},
+            'go north': { nextRoom: 'start', output: `You move north and walk up the stairs to the living room.`,
+                action: function() {
+                    document.body.style.backgroundImage = "url('art/couch.png')";
+                }
+            },
 
             'go south': { output: `You can not move south from here.`},
 
