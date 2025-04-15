@@ -2,7 +2,7 @@ let canvas = document.getElementById('myCanvas');
 let ctx = canvas.getContext('2d');
 
 let x = canvas.width / 2;
-let y = 450;
+let y = 550;
 
 let background = new Image();
 background.src = 'art/wander.png';
@@ -21,7 +21,7 @@ let actionButton = document.getElementById("actionButton");
 
 function updateButton() {
     actionButton.style.display = "none";
-    if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
+    if (x > canvas.width - 500 && x < canvas.width - 50 && y < 800 && y > 100) {
         actionButton.innerText = "Explore Hospital";
         actionButton.style.display = "block";
         actionButtonLink.href = "hospital.html";
@@ -38,8 +38,8 @@ actionButton.addEventListener('click', () => {
 function drawScene() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  if (x > canvas.width - 500 && x < canvas.width - 50 && y < 1200 && y > 800) {
-    ctx.drawImage(hospitalBackgroundBackground, 0, 0, canvas.width, canvas.height);
+  if (x > canvas.width - 500 && x < canvas.width - 50 && y < 800 && y > 100) {
+    ctx.drawImage(hospitalBackground, 0, 0, canvas.width, canvas.height);
   } 
   else {
     ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
