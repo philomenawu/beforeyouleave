@@ -206,7 +206,7 @@ const gameData = {
                         });
                     }, 0);
                 }},
-            'leave church': {action: function() {
+            'leave church': {output: `You follow the ghost and leave the church.`, action: function() {
                 window.location.href = 'prompt4.html';
             }},
             'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles, open eyes, leave church`,
