@@ -8,6 +8,11 @@ const gameData = {
                 to spot any wildlife (but for wildlife to spot you as well). Dry <strong>TWIGS</strong> cover your path. You watch your steps as to not make any loud, sudden noises.
                 You and your crew would usually stalk the area when darkness fell, lurking on any sleeping animals. You notice
                 a small <strong>CAVE</strong> in the distance and what seems to be smoke billowing from a nearby <strong>CAMPFIRE</strong>.`},
+            'examine twigs': { output: `Dry <strong>TWIGS</strong> cover the ground.`,
+                action: function() {
+                    document.getElementById('topimg').src="art/twigs.png";
+                }
+            },
             'pick up twigs': { output: `You crouch down and collect a few of the dry twigs and branches, shoving them in your pockets.`,
                 action: function() {
                     document.getElementById('topimg').src="art/twigs.png";
@@ -44,9 +49,6 @@ const gameData = {
             },
             'listen': { output: `You close your eyes and try listening to the conversation. It sounds like multiple voices layered and distorted on top of each other in
                 a back and forth conversation.`,
-                action: function () {
-                  document.getElementById('topimg').src="art/";
-                }
             },
             'feed fire': { output: `You have nothing to feed the flames. <i>You should pick up some of the dry twigs back at the</i> <strong>CLEARING</strong>.`},
             'get closer': { output: `You lean in towards the flame, careful to not get burned...<br>
@@ -73,10 +75,13 @@ const gameData = {
     },
     cave: {
         description: `You turn off your flashlight in case there's an animal inside the cave. You're taken aback by the sleeping <strong>TIGER</strong> inside.
-        You can see smoke coming from a <strong>CAMPFIRE</strong> in the distance.`,
+        You can see smoke coming from the <strong>CAMPFIRE</strong> in the distance.`,
         commands: {
             'look': { output: `There's a sleeping tiger in the cave.`},
-            'examine tiger': { output: ``},
+            'examine tiger': { output: `Despite the dark, you can see the tiger's body moving up and down with each breath. You can still recall the day
+                you hunted your first and only one down. The softness of its fur and the weight of its body as you and your friends carried it back to the village; 
+                the whole village had a celebatory feast that night. The last roar of a mighty beast. You look down at your wrinkled hands and feel a pang of guilt. 
+                You let the tiger sleep.`},
             'go to campfire': { nextRoom: 'camp', output: `You walk over to the campfire.`,
                 action: function () {
                   document.getElementById('topimg').src="art/smallfire.png";
