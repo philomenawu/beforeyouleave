@@ -2,7 +2,8 @@
 const gameData = {
     start: {
         description: `You arrive at the old hunting ground you and your fellow coworkers used to frequent. You haven't been back here since you quit the sport a few years ago,
-        but you know the grounds are about 8 miles away from the main village. You wonder how long you've been wandering the mountains for. Your back and feet are starting to get sore.`,
+        but you know the grounds are about 8 miles away from the main village. You wonder how long you've been wandering the mountains for. Your back and feet are starting to get sore.
+        You notice a small <strong>CAVE</strong> in the distance and what seems to be smoke billowing from a nearby <strong>CAMPFIRE</strong>.`,
         commands: {
             'look': { output: `The hunting ground is a relatively flat clearing of land with gentle slopes. The trees are sparse and far apart, making it easy
                 to spot any wildlife (but for wildlife to spot you as well). Dry <strong>TWIGS</strong> cover your path. You watch your steps as to not make any loud, sudden noises.
@@ -50,17 +51,26 @@ const gameData = {
             'listen': { output: `You close your eyes and try listening to the conversation. It sounds like multiple voices layered and distorted on top of each other in
                 a back and forth conversation.`,
             },
-            'feed fire': { output: `You have nothing to feed the flames. <i>You should pick up some of the dry twigs back at the</i> <strong>CLEARING</strong>.`},
-            'get closer': { output: `You lean in towards the flame, careful to not get burned...<br>
-                <i>ak kui</i>...<br>
-                Suddenly, you hear your name being uttered.<br>
-                The voices sound eerily like your children calling out to you. Growing up in the mountains, you were always told to never
-                say your name outloud, for spirits can steal voices and lure you into another world. <br>You stand still and stay quiet.<br>
-                <i>You should examine the fire</i>.`},
-            'examine fire': { output: `The flames crackle and wildly dance with the breeze, taking the shape of the ghost you've been following.
+            'feed fire': { output: `You have nothing to feed the flames. <i>You should pick up some of the dry twigs back at the</i> <strong>CLEARING</strong>.`,
+                action: function() {
+                document.getElementById('topimg').src = "art/fire.png";
+                gameData.camp.commands['examine fire'].action = function() {
+                    document.getElementById('topimg').src = "art/fireghost.png";
+                    gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, taking the shape of the ghost you've been following.
                 Except now it's even smaller, appearing as a young child, dancing wild and freely with the wind but chained to the charcoal and wood
-                that keeps it alive.`},
-            'go to cave': {nextRoom: 'cave', output: `You quietly walk over to the den and take a peek inside.`,
+                that keeps it alive.`;
+                    gameData.camp.commands['examine fire'].nextRoom = "ghost";
+                };
+                }
+            },
+            'get closer': { output: `You lean in towards the flame, careful to not get burned...<br><br>
+                <i>ak kui</i>...<br><br>
+                Suddenly, you hear your name being uttered.<br><br>
+                The voices sound eerily like your children calling out to you. Growing up in the mountains, you were always told to never
+                say your name outloud, for spirits can steal voices and lure you into another world. <br><br>You stand still and stay quiet.<br><br>
+                <i>You should examine the fire</i>.`},
+            'examine fire': { output: `A small flame flickers as the summer breeze threatens to blow it out.`},
+            'go to cave': {nextRoom: 'cave', output: `You quietly make your way over to the den and take a peek inside.`,
                 action: function () {
                     document.getElementById('topimg').src="art/tiger.png";
                     }
@@ -88,6 +98,12 @@ const gameData = {
                 }
             },
             'help': { output: `VALID COMMANDS: look, examine tiger, go to campfire`}
+        }
+    },
+    ghost: {
+        description: ``,
+        commands: {
+            'help': { output: `VALID COMMANDS: look, examine ghost, touch ghost, leave hunting ground`}
         }
     }
 }
