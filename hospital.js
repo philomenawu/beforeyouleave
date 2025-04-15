@@ -192,8 +192,7 @@ const gameData = {
                         span.style.color = "white";
                     });
                 }, 0);
-              }
-        },
+              }},
         'help': { output: `VALID COMMANDS: look, examine door`,
             action: function () {
                 document.getElementById('topimg').src="art/door.png";
@@ -207,7 +206,9 @@ const gameData = {
         }
     },
     exit: {
-        'leave hospital': {output: ``,
+        description: ``,
+        commands: {
+        'leave hospital': {output: `You follow the ghost and leave the hospital.`,
             action: function () {
                 window.location.href = 'prompt3.html';
                 setTimeout(() => {
@@ -227,7 +228,7 @@ const gameData = {
                 }, 0);
               }
         }
-    }
+    }}
 };
 
 window.onload = function() {
