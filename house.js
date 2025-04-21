@@ -1,7 +1,7 @@
 // Inside rooms
 const gameData = {
     start: {
-        description: `You're in a dark room. There's a telephone ringing. There's a staircase leading down <i>south</i> to the shop on the first floor.`,
+        description: `You're in a dark room. There's a <span style="color: white; font-weight: bold;">TELEPHONE</span> ringing. There's a staircase leading down <i>south</i> to the shop on the first floor.`,
         commands: {
             'start': { 
                         output: `You rub the sleep from your eyes as you're pulled from a dream you already forgot. You can hear the <span style="color: white; font-weight: bold;">TELEPHONE</span> across the room loudly ringing. 
