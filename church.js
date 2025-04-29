@@ -111,7 +111,7 @@ const gameData = {
         },
         'light candle': {output: `You shake out a matchstick and strike it against the side of the matchbox before carefully lighting a candle. The soft
             light of the fire warms your face. You hadn't realized how cold you were. The small fire wildly flickers and crackles, forming tall dancing 
-            shadows across the walls of the sanctuary. <i>You should go back to the pews now to pray.</i>`,
+            shadows across the walls of the sanctuary. <i>You should go back to the pews to pray.</i>`,
             action: function () {
                 document.getElementById('topimg').src="art/litcandle.png";
                 gameData.pew.commands['pray'].output = `You clasp your hands together and close your eyes in prayer...You wish for the safe and 
