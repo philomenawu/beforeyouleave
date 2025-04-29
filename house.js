@@ -33,7 +33,7 @@ const gameData = {
 
             'pick up glasses': {
                         output: `You bend down and pick up your <span style="color: white; font-weight: bold;">GLASSES</span>. Their bold black frames make them rather hard to lose, and they've lasted you almost a decade by now 
-                        despite how many times you've tossed them around. You quickly wipe the lenses with the hem of your shirt and put them on.`, 
+                        despite how many times you've tossed them around. You quickly wipe the lenses with the hem of your shirt and put them on. (Hint: Type 'help' to see what commands can be used within a room.)`, 
                         action: function() {
                             if (!gameState.inventory.includes('glasses')) {
                                 gameState.inventory.push('glasses');
