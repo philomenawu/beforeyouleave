@@ -110,7 +110,7 @@ const gameData = {
             'close window': { 
                 output: `A sudden strong breeze rushes in as you shut the window close, loudly slamming the shutters. You're abruptly engulfed in darkness with 
                 just the light from your flashlight. A chill runs down your spine. It feels as if the temperature has dropped by 20 degrees. <i>
-                You should go back to the </i> <span style="font-weight: bold;">CORRIDOR</span>.`,
+                You should go back to the </i> <span style="font-weight: bold;">CORRIDOR</span>. (Hint: Type 'go to corridor')`,
                 action: function () {
                     document.getElementById('topimg').src="art/closedwindow.png";
                     gameState.windowClosed = true;
