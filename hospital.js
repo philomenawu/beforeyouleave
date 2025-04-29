@@ -95,7 +95,7 @@ const gameData = {
     window: {
         description: `The shutters noisly hit against the side of the wall from the strong winds outside. You look out and take in the view of
         the dark sea of mountains and shimmering metal rooftops of houses below. It feels as if you can almost touch the moon from this high up the mountain.
-        As much as you enjoy the view, you should <i>close</i> the <span style="font-weight: bold;"> WINDOW </span> before any wildlife starts flying in.`,
+        As much as you enjoy the view, you should <i>close</i> the <span style="font-weight: bold;"> WINDOW </span> before any more bugs start flying in.`,
         commands: {
             'look': { output: `Despite the dark, you can make out the rolling sea of mountains and the shimmering metal rooftops of houses below.`,
                 action: function () {
