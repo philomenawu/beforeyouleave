@@ -50,6 +50,17 @@
             cursor: pointer;
             color: rgba(255, 255, 255, 0.6);
         }
+        .restart-container {
+            position: fixed;
+            bottom: 40px;
+            width: 100%;
+            text-align: right;
+            right: 40px;
+        }
+
+        .restart-container a {
+            color: white;
+        }
     </style>
     <body>
         <div class="container">
@@ -57,4 +68,9 @@
                 <p><span onclick="window.location.href='end2.html'">You don't find the ghost.&nbsp;.&nbsp;.</span></p>
             </div>
         </div>
+        <div class="restart-container">
+            <a href="index.html" style="text-decoration: none;">
+              <i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;restart game&nbsp;
+            </a>
+          </div>
     </body>
