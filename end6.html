@@ -49,11 +49,37 @@
             cursor: pointer;
             color: rgba(255, 255, 255, 0.6);
         }
+        button {
+            all: unset;
+            padding: 10px 15px;
+            font-size: 28px;
+            background-color: transparent;
+            cursor: pointer;
+            height: 50px;
+            text-align: center;
+        }
+        .next {
+            width: 15%;
+            height: auto;
+            z-index: 9999;
+            text-align: center;
+        }
+        .button-wrapper {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
     </style>
     <body>
         <div class="container">
             <div class="typewriter">
-                <p><span onclick="window.location.href='index.html'">...You wonder if ghosts can dream of a future.&nbsp;.&nbsp;.</span></p>
+                <p><span onclick="window.location.href='index.html'">.&nbsp;.&nbsp;.You wonder if ghosts can dream of a future.&nbsp;.&nbsp;.</span></p>
+            </div>
+            <br>
+            <br>
+            <div class="button-wrapper">
+                <a href="index.html"><button><img class="next" src="art/whitenext.png"></button></a>
             </div>
         </div>
     </body>
