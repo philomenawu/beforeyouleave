@@ -3,7 +3,7 @@ const gameData = {
     start: {
         description: `You arrive at the <span style="font-weight: bold;">HOSPITAL</span>. It's a rather small building and about a 30 minute walk up the mountain from your house.
         After back and forth negotiations with government officials over several months, you still take pride in finally having convinced them to approve its construction.
-        You should <i>enter</i> the <span style="font-weight: bold;">HOSPITAL</span> to investigate the strange call.`,
+        You should <i>enter</i> the <span style="font-weight: bold;">HOSPITAL</span> to investigate the strange call. (Hint: Type 'enter hospital')`,
         commands: {
             'look': { output: `The building is long and narrow. Overgrown thickets crawl up the sides of the building and cover the <span style="font-weight: bold;">HOSPITAL</span> sign. The place is illuminated
                 only by your flashlight and the moon. <i> You should go inside and check if anything is off... </i>`},
@@ -83,7 +83,6 @@ const gameData = {
             },
             'help': { output: `VALID COMMANDS: look, examine corridor, examine windows, examine [?]`,
                 action: function () {
-                    document.getElementById('topimg').src="art/door.png";
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
                             span.style.color = "white";
