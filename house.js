@@ -33,7 +33,7 @@ const gameData = {
 
             'pick up glasses': {
                         output: `You bend down and pick up your <span style="color: white; font-weight: bold;">GLASSES</span>. Their bold black frames make them rather hard to lose, and they've lasted you almost a decade by now 
-                        despite how many times you've tossed them around. You quickly wipe the lenses with the hem of your shirt and put them on. (Hint: Type 'help' to see what commands can be used within a room.)`, 
+                        despite how many times you've tossed them around. You quickly wipe the lenses with the hem of your shirt and put them on. (Hint: Type 'look' to see what objects are in the room.)`, 
                         action: function() {
                             if (!gameState.inventory.includes('glasses')) {
                                 gameState.inventory.push('glasses');
@@ -48,8 +48,8 @@ const gameData = {
                         that you and your friends hunted last year standing proudly on display by the box <span style="color: white; font-weight: bold;">TELEVISION</span> set. 
                         Next to it is a lone black rotary <span style="color: white; font-weight: bold;">TELEPHONE</span>. Despite the strict water and electricity schedule throughout the 
                         entire village, being one of the only specialized doctors gives you the perk of being abruptly woken up in the middle of the night by the blaring noise 
-                        in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight. The bedrooms are to the <i> east </i> 
-                        while the dining room and kitchen are to the <i> west </i> of here. Stairs lead down to the shop.`
+                        in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight. The bedrooms are to the <i>east</i> 
+                        while the dining room and kitchen are to the <i>west</i> of here. Stairs lead down <i>south</i> to the shop.`
                     },
 
             'pick up telephone': { output: `You carefully place the telephone back down...taken aback by the strange call. You should leave the house to check it out.`},
@@ -77,7 +77,7 @@ const gameData = {
             'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back rest and bottom seat made of woven cane.`},
 
             'help': { 
-                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine tiger, examine television, examine floor, examine bench
+                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine tiger, examine television, examine floor, examine bench,
                          pick up glasses, pick up telephone.`
                     }
         }
