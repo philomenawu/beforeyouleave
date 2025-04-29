@@ -25,7 +25,7 @@ const gameData = {
                 }
              },
 
-            'go west': { nextRoom: 'diningroom', output: `You move west and walk into the <span style="color: white; font-weight: bold;">dining room</span>.`,
+            'go west': { nextRoom: 'diningroom', output: `You move west and walk into the dining room.`,
                 action: function() {
                     document.body.style.backgroundImage = "url('art/diningroom.png')";
                 }
@@ -253,7 +253,7 @@ const gameData = {
                         <span style="color: white; font-weight: bold;">TOMMY</span>, your labrador retriever, and <span style="color: white; font-weight: bold;">JACKIE</span>, your german shepherd, poke their head around the caged off corner of the kitchen.` 
                     },
             'examine cabinet': {
-                output: `The cabinet is closed but you can imagine all the random tools and knick knacks you and your family have tossed in there for storage keeping.`
+                output: `The cabinet is closed but you can imagine all the random tools and knick knacks you and your family have tossed in there for storage keeping. (Hint: Type 'open cabinet')`
             },
         
             'open cabinet': {
@@ -295,7 +295,7 @@ const gameData = {
 
             'pet Jackie': {output: `Jackie wags his tail and playfully bites at your fingers while you rub his back.`},
 
-            'help': { output: `VALID COMMANDS IN ROOM: look, go east, examine recipe, examine lists, examine cabinet, examine tommy, examine jackie
+            'help': { output: `VALID COMMANDS IN ROOM: look, go east, examine recipe, examine lists, examine cabinet, examine tommy, examine jackie,
                 pet tommy, pet jackie, open cabinet, pick up flashlight.`}
         }
     },
