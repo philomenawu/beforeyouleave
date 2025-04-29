@@ -1,10 +1,10 @@
 // Inside rooms
 const gameData = {
     start: {
-        description: `You find yourself at your <span style="font-weight: bold;">CHURCH</span>, St. Lawrence. It's a small wooden cathedral built on top of the mountain by visiting British missionaries some decades ago. 
-        Despite being a Buddhist country, almost everyone in the village are practicing Christians...you often hear talk of it being the reason why the government 
-        offers so little aid- essentially abandoning the village. You figured if you were a lost wandering soul, you'd take refuge in your <span style="font-weight: bold;">CHURCH</span>. 
-        You should <i> enter</i> the <span style="font-weight: bold;">CHURCH</span> and see if the ghost is there.`,
+        description: `You find yourself at your local <span style="font-weight: bold;">CHURCH</span>, St. Lawrence. It's a small wooden cathedral built on top of the mountain by visiting British missionaries some decades ago. 
+        Despite being a Buddhist country, almost all the villagers are practicing Christians...you often hear talk of it being the reason why the government 
+        cares so little for the place- essentially abandoning the village. You figured if you were a lost wandering soul, you'd take refuge in your <span style="font-weight: bold;">CHURCH</span>. 
+        You should <i> enter</i> the <span style="font-weight: bold;">CHURCH</span> and check if the ghost is there. (Hint: Type 'enter church')`,
         commands: {
             'look': { output: `The cathedral is made of wooden logs cut down from the towering trees of the surrounding forests. 
             Tall glass windows reflect the night sky. A cross sits on top of the bell tower.`},
