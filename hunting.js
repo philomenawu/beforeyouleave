@@ -1,7 +1,7 @@
 // Inside rooms
 const gameData = {
     start: {
-        description: `You arrive at the old hunting ground you and your fellow coworkers used to frequent. You haven't been back here since you quit the sport a few years ago,
+        description: `You arrive at the old hunting ground you and your fellow coworkers used to frequent. You haven't been back here since you quit the sport a year ago,
         but you know the grounds are about 15 miles away from the main village. You wonder how long you've been wandering the mountains for. Your back and feet are starting to get painfully sore.
         You notice a small <strong>CAVE</strong> in the distance and what seems to be smoke billowing from a nearby <strong>CAMPFIRE</strong>.`,
         commands: {
@@ -21,6 +21,13 @@ const gameData = {
                         document.getElementById('topimg').src = "art/fire.png";
                         gameData.camp.commands['feed fire'].output = `You toss the dry twigs into the fire and quickly blow air to fan it, bringing the fire back to life. You can
                     feel the heat pricking at your face. The voices become clearer...<i>you should examine the fire again</i>`;
+                    };
+                    gameData.camp.commands['examine fire'].action = function() {
+                        document.getElementById('topimg').src = "art/fireghost.png";
+                        gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, bursting into figures and spirits. You can hear them shouting, laughing, and wailing
+                        all at the same time over the roaring flames. They dance wild and freely with the wind as if trying to escape the charcoal and wood keeping them alive.
+                        You notice one of the figures appears to be the ghost you've been following. (Hint: Type 'examine ghost')`;
+                        gameData.camp.commands['examine ghost'].nextRoom = "ghost";
                     };
                 }
             },
@@ -52,15 +59,15 @@ const gameData = {
                 speaking in different dialects. The fire is almost out, <i>you should try getting closer.</i> (Hint: Type 'get closer')`,
             },
             'feed fire': { output: `You have nothing to feed the flames. <i>You should pick up some of the dry twigs back at the</i> <strong>CLEARING</strong>.`,
-                action: function() {
-                gameData.camp.commands['examine fire'].action = function() {
-                    document.getElementById('topimg').src = "art/fireghost.png";
-                    gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, bursting into figures and spirits. You can hear them shouting, laughing, and wailing
-                    all at the same time over the roaring flames. They dance wild and freely with the wind as if trying to escape the charcoal and wood keeping them alive.
-                    You notice one of the figures appears to be the ghost you've been following. (Hint: Type 'examine ghost')`;
-                    gameData.camp.commands['examine ghost'].nextRoom = "ghost";
-                };
-                }
+                // action: function() {
+                // gameData.camp.commands['examine fire'].action = function() {
+                //     document.getElementById('topimg').src = "art/fireghost.png";
+                //     gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, bursting into figures and spirits. You can hear them shouting, laughing, and wailing
+                //     all at the same time over the roaring flames. They dance wild and freely with the wind as if trying to escape the charcoal and wood keeping them alive.
+                //     You notice one of the figures appears to be the ghost you've been following. (Hint: Type 'examine ghost')`;
+                //     gameData.camp.commands['examine ghost'].nextRoom = "ghost";
+                // };
+                // }
             },
             'get closer': { output: `You lean in towards the flame, careful to not get burned...<br><br>
                 <i>ak kui</i>...<br><br>
