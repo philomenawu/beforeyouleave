@@ -87,7 +87,7 @@ const gameData = {
         description: `You turn off your flashlight in case there's an animal inside the cave. You're taken aback by the sleeping <strong>TIGER</strong> inside.
         You can see smoke coming from the <strong>CAMPFIRE</strong> in the distance.`,
         commands: {
-            'look': { output: `There's a sleeping tiger in the cave.`},
+            'look': { output: `You find a tiger peacefully sleeping in the cave.`},
             'examine tiger': { output: `Despite the dark, you can see the tiger's body moving up and down with each heavy breath. You can still recall the day
                 you hunted your first and only one down. You remember the tough muscle underneath its soft fur and the weight of its lifeless body as you and your friends carried it back to the village; 
                 the whole village held a celebatory feast that night. Catching, let alone hunting, a tiger only occurs once in a blue moon. 
