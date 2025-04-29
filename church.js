@@ -115,7 +115,7 @@ const gameData = {
             action: function () {
                 document.getElementById('topimg').src="art/litcandle.png";
                 gameData.pew.commands['pray'].output = `You clasp your hands together and close your eyes in prayer...You wish for the safe and 
-                peaceful passage of this lost soul...<i>(open your eyes when you finish praying). </i>`
+                peaceful passage of this lost soul...(Hint: Type 'open eyes' after you finish praying)`
                 gameData.pew.commands['pray'].action = function () {
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
@@ -156,7 +156,7 @@ const gameData = {
     }},
     pew: {
         description: `The seat is cold. You look towards the altar. A white cloth is drapped over the table. A large wooden cross hangs above it.
-        You wish to <i> pray </i> for the lost soul. (Hint: Type 'pray') `,
+        You wish to <i> pray </i> for the lost soul. (Hint: Type 'pray')`,
         commands: {
             'look': {output: ``,
                 action: function() {
@@ -195,10 +195,10 @@ const gameData = {
                     }, 0);
                 }
              },
-             'open eyes': {output: `You open your eyes and almost jump from your seat. The ghost is right in front of you. The outline of the spirit is
+             'open eyes': {output: `You open your eyes and almost jump out of your seat. The ghost is right in front of you. The outline of the spirit is
                 much clearer now and seems to have shrunk in size, standing at almost your own height. It still remains silent and unwavering. 
-                Before you can move or say anything, it slips back out of the building like a whisper...blowing out the candle in the process...
-                you should <i> leave </i> the church to follow it...`, action: function () {
+                Before you can move or say anything, it slips back out of the building like a whisper...blowing out the candle...
+                you should <i>leave</i> the church to follow it...`, action: function () {
                     document.getElementById('topimg').src="art/churchghostclose.png",
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
