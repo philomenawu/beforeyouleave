@@ -32,12 +32,12 @@ const gameData = {
         description: `You find yourself staring down the long aisle of the nave. Rows of carved wooden <span style="font-weight: bold;"> PEWS </span> run down on either side of you,
         leading up to the sancutary. A blur of white catches the corner of your eye. As you squint, you make out the faint silhouette of the <span style="font-weight: bold;"> GHOST </span> 
         seated at the front near the altar. A stand of unlit voltive prayer <span style="font-weight: bold;"> CANDLES </span> are at the back of the room.
-        <i>You think about offering a prayer to the strange visitor</i>.`,
+        <i>You think about offering a prayer to the strange visitor</i>. (Hint: Go to the pews to pray)`,
         commands: {
             'look': { output: `Rows of wooden  <span style="font-weight: bold;"> PEWS </span> run down both side of the nave with a rather narrow aisle in the center leading up to the 
                 sanctuary. Soft light from outside seeps through the many glass windows, illuminating the altar and the large cross that hangs above it.
                 You notice the smoky figure of the ghost seated in the very front row. A stand of voltive prayer <span style="font-weight: bold;"> CANDLES </span> are at the back of the room.
-                <i>You think about offering a prayer to the strange visitor</i>. (Hint: Go to the pews to pray)`,
+                <i>You think about offering a prayer to the strange visitor</i>.`,
             action: function() {
                 setTimeout(() => {
                     document.querySelectorAll('#textoutput span').forEach(span => {
