@@ -185,7 +185,7 @@ const gameData = {
 
             'examine window': { 
                     output: `You quietly make your way to the window and take in the view. Your house is settled in the middle of the mountain by the main road- a winding
-                    path that leads up to the church and hospital. You can see the red metal rooftops of neighbors below against the sea of of trees and shrubbery. Rolling mountains extend out
+                    path that leads up to the church and hospital. You can see the red metal rooftops of neighboring houses below against the sea of of trees and shrubbery. Rolling mountains extend out
                     into the horizon, blending with the paint-splattered night sky.`
                 },
 
