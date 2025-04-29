@@ -78,8 +78,8 @@ const gameData = {
             'examine bench': { output: `The bench is part of an intricately carved teak wood furniture set with the back rest and bottom seat made of woven cane.`},
 
             'help': { 
-                        output: `VALID COMMANDS IN ROOM: look, go south, go east, go west, examine tiger, examine television, examine floor, examine bench,
-                         pick up glasses, pick up telephone.`
+                        output: `VALID COMMANDS IN ROOM: pick up glasses, look, go south, go east, go west, examine tiger, examine television, examine telephone, examine floor, examine bench,
+                         pick up telephone`
                     }
         }
     },
