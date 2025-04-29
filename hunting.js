@@ -80,7 +80,12 @@ const gameData = {
                     document.getElementById('topimg').src="art/hunting.png";
                 }
             },
-            'help': { output: `VALID COMMANDS: look, listen, feed fire, get closer, examine fire, go to cave, go to clearing`}
+            'help': { output: `VALID COMMANDS: look, listen, feed fire, get closer, examine fire, go to cave, go to clearing`},
+            'examine ghost': {nextRoom: 'ghost', output: `You lean in towards the fire.`,
+                action: function () {
+                    document.getElementById('topimg').src="art/smallghost.png";
+                    }
+            }
         }
     },
     cave: {
@@ -102,9 +107,17 @@ const gameData = {
         }
     },
     ghost: {
-        description: ``,
+        description: `Just as quickly as the spirits revealed themselves in blazing glory, they quickly flicker out, leaving just the ghost you've been following.
+        Every time you seem to cross paths, it grows smaller and smaller yet clearer and clearer. It now takes the shape of a young boy...nota stranger or a friend...
+        you wonder if it's someone from a past life. You wonder about faith. You wonder when you started seeing ghosts...and when you no longer became afraid.
+        You bring your hand up and reach out towards the fire...but before you can touch it, the ghost slips away. It's eyes look like your own.
+        <i>You should leave the hunting ground and follow it...</i> `,
         commands: {
-            'help': { output: `VALID COMMANDS: look, examine ghost, touch ghost, leave hunting ground`}
+            'leave hunting ground': { output: `You follow the ghost and leave the hunting ground.`,
+                action: function () {
+                    window.location.href = 'prompt6.html';
+            }},
+            'help': { output: `VALID COMMANDS: leave hunting ground`}
         }
     }
 }
