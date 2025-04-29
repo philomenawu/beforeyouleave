@@ -155,8 +155,8 @@ const gameData = {
     },
 
     children: {
-        description: `All three <span style="color: white; font-weight: bold;">CHILDREN</span> share a bedroom at the end of the hallway. A large glass <span style="color: white; font-weight: bold;">WINDOW</span> faces opposite of their beds, 
-        giving a view of the mountainous village. The full moon can be seen clearly from here, illuminating the entire room in a milky glow. Soft shadows from towering trees nearby sway and dance across the concrete walls.
+        description: `All three <span style="color: white; font-weight: bold;">CHILDREN</span> share a bedroom at the end of the hallway. A large glass <span style="color: white; font-weight: bold;">WINDOW</span> is on the opposite side of their beds, 
+        revealing a view of the rolling mountains and sleeping village. The full moon can be seen clearly from here, illuminating the entire room in a milky glow. Soft shadows from towering trees against the window sway and dance across the concrete walls of the bedroom.
         The master bedroom is back <i>west</i>.`,
         commands: {
             'go north': { output: `You can not move north from here.`},
