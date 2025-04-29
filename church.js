@@ -98,7 +98,7 @@ const gameData = {
     },
     candles: {
         description: `Piles of ash and wax surround the bottom of the unlit candles. A box of matchsticks is neatly tucked away on the side of the stand. The sharp scent of
-        incense and smoke fills your nostrils. You should <i>light</i> a candle before offering a prayer to the spirit.`,
+        incense and smoke fills your nostrils. You should <i>light</i> a <span style="font-weight: bold;">CANDLE</span> before offering a prayer to the spirit.`,
         commands: {
         'look': {output: `Piles of ash and wax surround the bottom of the unlit candles. A box of matchsticks is neatly tucked away on the side of the stand.`,
             action: function() {
