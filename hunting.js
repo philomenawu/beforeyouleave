@@ -40,16 +40,16 @@ const gameData = {
     camp: {
         description: `You look around, and as you approach the <strong>FIRE</strong>, you begin to feel uneasy from the lack of any signs of activity or human presence. 
         You stop in your tracks a few feet away and crouch behind a shrub. The dying flames light up the sky. Embers spark and crackle.
-        The fire is almost out. You aren't sure if you're tired mind is playing tricks on you, but you can hear what seems to be voices 
-        whispering...you can barely make out the words let alone notice anyone around. You can see a small <strong> dark
-        CAVE</strong> in the distance.`,
+        The fire is almost out. You aren't sure if your tired mind is playing tricks on you, but you can hear what seems to be voices 
+        whispering...you can barely make out the words let alone see anyone around. There's a small dark
+        <strong>CAVE</strong> in the distance. <i>You should try to listen.</i> (Hint: Type 'listen')`,
         commands: {
             'look': { output: `Piles of chopped wood, twigs, branches, and rocks make up the campfire. Whispy smoke rise into the sky. Embers spark and crackle as
                 ashes float into the air. You don't see anyone around, but can hear what sounds to be multiple voices whispering around the campfire. 
-                You should try to <i>listen</i>.`,
+                </i>You should try to listen</i>.`,
             },
-            'listen': { output: `You close your eyes and try listening to the conversation. It sounds like multiple voices layered and distorted on top of each other in
-                a back and forth conversation.`,
+            'listen': { output: `You close your eyes and try carefully listening to the mysterious conversation. You can only hear what sounds like multiple voices layered and distorted on top of each other
+                speaking in different dialects. The fire is almost out, <i>you should try getting closer.</i> (Hint: Type 'get closer')`,
             },
             'feed fire': { output: `You have nothing to feed the flames. <i>You should pick up some of the dry twigs back at the</i> <strong>CLEARING</strong>.`,
                 action: function() {
@@ -66,10 +66,11 @@ const gameData = {
             'get closer': { output: `You lean in towards the flame, careful to not get burned...<br><br>
                 <i>ak kui</i>...<br><br>
                 Suddenly, you hear your name being uttered.<br><br>
-                The voices sound eerily like your children calling out to you. Growing up in the mountains, you were always told to never
+                The voices sound eerily like your own children calling out to you. You feel your skin turn cold. Growing up in the mountains, you were always told to never
                 say your name outloud, for spirits can steal voices and lure you into another world. <br><br>You stand still and stay quiet.<br><br>
                 <i>You should examine the fire</i>.`},
-            'examine fire': { output: `A small flame flickers as the summer breeze threatens to blow it out.`},
+            'examine fire': { output: `A small flame flickers as the summer breeze threatens to blow it out. You can see the fire almost going out. <i>You should try to
+                bring it back to life.</i> (Hint: Type 'feed fire')`},
             'go to cave': {nextRoom: 'cave', output: `You quietly make your way over to the den and take a peek inside.`,
                 action: function () {
                     document.getElementById('topimg').src="art/tiger.png";
