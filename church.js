@@ -37,7 +37,7 @@ const gameData = {
             'look': { output: `Rows of wooden  <span style="font-weight: bold;"> PEWS </span> run down both side of the nave with a rather narrow aisle in the center leading up to the 
                 sanctuary. Soft light from outside seeps through the many glass windows, illuminating the altar and the large cross that hangs above it.
                 You notice the smoky figure of the ghost seated in the very front row. A stand of voltive prayer <span style="font-weight: bold;"> CANDLES </span> are at the back of the room.
-                <i>You think about offering a prayer to the strange visitor</i>.`,
+                <i>You think about offering a prayer to the strange visitor</i>. (Hint: Go to the pews to pray)`,
             action: function() {
                 setTimeout(() => {
                     document.querySelectorAll('#textoutput span').forEach(span => {
@@ -45,7 +45,7 @@ const gameData = {
                     });
                 }, 0);
             }},
-            'examine ghost': { output: `You can't clearly make out the ghost from this distance.`,
+            'examine ghost': { output: `A faint glow surrounds the ghost, but you still can't clearly make out distinct features.`,
                 action: function () {
                   document.getElementById('topimg').src="art/churchghost.png";
                   setTimeout(() => {
@@ -98,7 +98,7 @@ const gameData = {
     },
     candles: {
         description: `Piles of ash and wax surround the bottom of the unlit candles. A box of matchsticks is neatly tucked away on the side of the stand. The sharp scent of
-        incense and smoke fills your nostrils. You should <i> light </i> a candle before offering a prayer to the spirit.`,
+        incense and smoke fills your nostrils. You should <i>light</i> a candle before offering a prayer to the spirit.`,
         commands: {
         'look': {output: `Piles of ash and wax surround the bottom of the unlit candles. A box of matchsticks is neatly tucked away on the side of the stand.`,
             action: function() {
@@ -111,7 +111,7 @@ const gameData = {
         },
         'light candle': {output: `You shake out a matchstick and strike it against the side of the matchbox before carefully lighting a candle. The soft
             light of the fire warms your face. You hadn't realized how cold you were. The small fire wildly flickers and crackles, forming tall dancing 
-            shadows across the walls of the sanctuary.`,
+            shadows across the walls of the sanctuary. <i>You should go back to the pews now to pray.</i>`,
             action: function () {
                 document.getElementById('topimg').src="art/litcandle.png";
                 gameData.pew.commands['pray'].output = `You clasp your hands together and close your eyes in prayer...You wish for the safe and 
@@ -156,7 +156,7 @@ const gameData = {
     }},
     pew: {
         description: `The seat is cold. You look towards the altar. A white cloth is drapped over the table. A large wooden cross hangs above it.
-        You wish to <i> pray </i> for the lost soul. `,
+        You wish to <i> pray </i> for the lost soul. (Hint: Type 'pray') `,
         commands: {
             'look': {output: ``,
                 action: function() {
