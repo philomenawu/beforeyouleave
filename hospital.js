@@ -110,7 +110,7 @@ const gameData = {
             'close window': { 
                 output: `A sudden strong breeze rushes in as you shut the window close, loudly slamming the shutters. You're abruptly engulfed in darkness with 
                 just the light from your flashlight. A chill runs down your spine. It feels as if the temperature has dropped by 20 degrees. <i>
-                You should go back to the </i> <span style="font-weight: bold;">CORRIDOR</span>. (Hint: Type 'go to corridor')`,
+                You should go back to the </i> <span style="font-weight: bold;">CORRIDOR</span>.`,
                 action: function () {
                     document.getElementById('topimg').src="art/closedwindow.png";
                     gameState.windowClosed = true;
@@ -119,7 +119,8 @@ const gameData = {
                     Where you imagine its head to be almost reaches the ceiling. You try to contain your shock at its towering stature.
                     Having been born and raised in the mountains, you can't say you've gotten used to the supernatural, but stumbling across wandering spirits and 
                     ghosts are not an uncommon occurrence for you especially during these late-night calls...but
-                    you've never had one seemingly and suddenly reveal itself in front you.`;
+                    you've never had one seemingly and suddenly reveal itself in front you.<br>
+                    (Hint: Type 'examine ghost')`;
 
                     gameData.window.description = ``;
                     gameData.window.commands["look"].output = `The window is now shut.`;
