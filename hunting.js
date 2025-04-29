@@ -24,7 +24,7 @@ const gameData = {
                     };
                     gameData.camp.commands['examine fire'].action = function() {
                         document.getElementById('topimg').src = "art/fireghost.png";
-                        gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, bursting into figures and spirits. You can hear them shouting, laughing, and wailing
+                        gameData.camp.commands['examine fire'].output = `You toss in the dry twigs and watch the flames crackle and wildly dance with the breeze, bursting into figures and spirits. You can hear them shouting, laughing, and wailing
                         all at the same time over the roaring flames. They dance wild and freely with the wind as if trying to escape the charcoal and wood keeping them alive.
                         You notice one of the figures appears to be the ghost you've been following. (Hint: Type 'examine ghost')`;
                         gameData.camp.commands['examine ghost'].nextRoom = "ghost";
