@@ -66,6 +66,17 @@
             width: 15%;
             height: auto;
         }
+        .restart-container {
+            position: fixed;
+            bottom: 40px;
+            width: 100%;
+            text-align: right;
+            right: 40px;
+        }
+
+        .restart-container a {
+            color: black;
+        }
 
     </style>
 </head>
@@ -83,10 +94,15 @@
             <br>
             <a href="wander3.html"><button><img class="next" src="art/nextbuton.png"></button></a>
         </div>
+        <div class="restart-container">
+            <a href="index.html" style="text-decoration: none;">
+              <i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;restart game&nbsp;
+            </a>
+          </div>
     </div> 
 
     <script>
-        let timeLeft = 60;
+        let timeLeft = 120;
         let timerElement = document.getElementById("timer");
         let button = document.getElementById("nextButton");
 
