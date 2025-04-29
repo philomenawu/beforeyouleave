@@ -20,7 +20,7 @@ const gameData = {
                     gameData.camp.commands['feed fire'].action = function() {
                         document.getElementById('topimg').src = "art/fire.png";
                         gameData.camp.commands['feed fire'].output = `You toss the dry twigs into the fire and quickly blow air to fan it, bringing the fire back to life. You can
-                    feel the heat pricking at your face. The voices become clearer...<i>you should get closer</i>`;
+                    feel the heat pricking at your face. The voices become clearer...<i>you should examine the fire again</i>`;
                     };
                 }
             },
@@ -55,10 +55,10 @@ const gameData = {
                 action: function() {
                 gameData.camp.commands['examine fire'].action = function() {
                     document.getElementById('topimg').src = "art/fireghost.png";
-                    gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, taking the shape of the ghost you've been following.
-                Except now it's even smaller, appearing as a young child, dancing wild and freely with the wind but chained to the charcoal and wood
-                that keeps it alive. (Hint: Type 'examine fire')`;
-                    gameData.camp.commands['examine fire'].nextRoom = "ghost";
+                    gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, bursting into figures and spirits. You can hear them shouting, laughing, and wailing
+                    all at the same time over the roaring flames. They dance wild and freely with the wind as if trying to escape the charcoal and wood keeping them alive.
+                    You notice one of the figures appears to be the ghost you've been following. (Hint: Type 'examine ghost')`;
+                    gameData.camp.commands['examine ghost'].nextRoom = "ghost";
                 };
                 }
             },
