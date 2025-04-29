@@ -49,7 +49,8 @@ const gameData = {
                         Next to it is a lone black rotary <span style="color: white; font-weight: bold;">TELEPHONE</span>. Despite the strict water and electricity schedule throughout the 
                         entire village, being one of the only specialized doctors gives you the perk of being abruptly woken up in the middle of the night by the blaring noise 
                         in case of emergencies back at your hospital. Your wristwatch reveals it's just a quarter past midnight. The bedrooms are to the <i>east</i> 
-                        while the dining room and kitchen are to the <i>west</i> of here. Stairs lead down <i>south</i> to the shop.`
+                        while the dining room and kitchen are to the <i>west</i> of here. Stairs lead down <i>south</i> to the shop.<br>
+                        (Hint: Type 'help' to see what commands can be used within the room.)`
                     },
 
             'pick up telephone': { output: `You carefully place the telephone back down...taken aback by the strange call. You should leave the house to check it out.`},
