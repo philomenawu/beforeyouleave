@@ -53,12 +53,11 @@ const gameData = {
             },
             'feed fire': { output: `You have nothing to feed the flames. <i>You should pick up some of the dry twigs back at the</i> <strong>CLEARING</strong>.`,
                 action: function() {
-                document.getElementById('topimg').src = "art/fire.png";
                 gameData.camp.commands['examine fire'].action = function() {
                     document.getElementById('topimg').src = "art/fireghost.png";
                     gameData.camp.commands['examine fire'].output = `The flames crackle and wildly dance with the breeze, taking the shape of the ghost you've been following.
                 Except now it's even smaller, appearing as a young child, dancing wild and freely with the wind but chained to the charcoal and wood
-                that keeps it alive.`;
+                that keeps it alive. (Hint: Type 'examine fire')`;
                     gameData.camp.commands['examine fire'].nextRoom = "ghost";
                 };
                 }
@@ -69,7 +68,7 @@ const gameData = {
                 The voices sound eerily like your own children calling out to you. You feel your skin turn cold. Growing up in the mountains, you were always told to never
                 say your name outloud, for spirits can steal voices and lure you into another world. <br><br>You stand still and stay quiet.<br><br>
                 <i>You should examine the fire</i>.`},
-            'examine fire': { output: `A small flame flickers as the summer breeze threatens to blow it out. You can see the fire almost going out. <i>You should try to
+            'examine fire': { output: `A small flame flickers as the summer breeze threatens to blow it out. You can see the fire slowly dying. <i>You should try to
                 bring it back to life.</i> (Hint: Type 'feed fire')`},
             'go to cave': {nextRoom: 'cave', output: `You quietly make your way over to the den and take a peek inside.`,
                 action: function () {
