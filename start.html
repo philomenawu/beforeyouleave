@@ -70,6 +70,19 @@
             width: 17%;
             height: auto;
         }
+
+        .restart-container {
+            position: fixed;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-family: "Alice", serif;
+            font-size: 16px;
+        }
+
+        .restart-container a {
+            color: white;
+        }
         
     </style>
 </head>
@@ -83,6 +96,7 @@
             </span>
         </div>
     </div>
+    
 
     <!-- Instructions -->
     <div id="menu-container">
@@ -129,6 +143,12 @@
         <button id="next-button"><img class="next" src="art/whitenext.png"></button>
         <!-- <button id="next-button">></button> -->
     </div>
+    <div class="restart-container">
+        <a href="index.html" style="text-decoration: none;">
+          <i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;restart game&nbsp;
+        </a>
+      </div>
+    
 
     <!-- Game instructions -->
     <script src="menu_popup.js"></script>
