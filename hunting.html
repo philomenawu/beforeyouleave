@@ -229,6 +229,17 @@
             background-color: transparent;
             border: none;
         }
+        .restart-container {
+            position: fixed;
+            bottom: 40px;
+            width: 100%;
+            text-align: right;
+            right: 40px;
+        }
+
+        .restart-container a {
+            color: black;
+        }
     </style>
 </head>
 <body>
@@ -280,6 +291,11 @@
             </span>
         </div>
     </div>
+    <div class="restart-container">
+        <a href="index.html" style="text-decoration: none;">
+          <i class="fa fa-repeat" aria-hidden="true"></i>&nbsp;restart game&nbsp;
+        </a>
+      </div>
     <script src="hunting.js"></script>
     <script src="lakeparser.js"></script>
     <script src="menu_popup.js"></script>
