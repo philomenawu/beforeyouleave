@@ -70,7 +70,7 @@ const gameData = {
                 }
             },
             'examine ghost': { nextRoom: 'door', output: `You can barely make out the silhouette of the figure. 
-                What seems like hazy smoke blurs distorts its mass and features except for its bright eyes that seem to stare right through you. It doesn't move nor
+                What seems like hazy smoke distorts its mass and features except for its bright eyes that seem to stare right through you. It doesn't move nor
                 make any sound. For some odd reason, you can't shake the feeling that it's someone you know. You wonder if they're a past patient of yours who has recently passed away- a lost soul.`,
                 action: function () {
                     document.getElementById('topimg').src="art/ghostclose.png";

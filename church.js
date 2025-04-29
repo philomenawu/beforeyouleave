@@ -209,7 +209,7 @@ const gameData = {
             'leave church': {output: `You follow the ghost and leave the church.`, action: function() {
                 window.location.href = 'prompt4.html';
             }},
-            'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles, open eyes, leave church`,
+            'help': { output: `VALID COMMANDS: look, pray, examine ghost, go to candles`,
                 action: function () {
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
