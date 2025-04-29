@@ -2,11 +2,11 @@
 const gameData = {
     start: {
         description: `You arrive at the old hunting ground you and your fellow coworkers used to frequent. You haven't been back here since you quit the sport a few years ago,
-        but you know the grounds are about 8 miles away from the main village. You wonder how long you've been wandering the mountains for. Your back and feet are starting to get sore.
+        but you know the grounds are about 15 miles away from the main village. You wonder how long you've been wandering the mountains for. Your back and feet are starting to get painfully sore.
         You notice a small <strong>CAVE</strong> in the distance and what seems to be smoke billowing from a nearby <strong>CAMPFIRE</strong>.`,
         commands: {
             'look': { output: `The hunting ground is a relatively flat clearing of land with gentle slopes. The trees are sparse and far apart, making it easy
-                to spot any wildlife (but for wildlife to spot you as well). Dry <strong>TWIGS</strong> cover your path. You watch your steps as to not make any loud, sudden noises.
+                to spot any wildlife (but for the wildlife to spot you as well). Dry <strong>TWIGS</strong> cover your path. You watch your steps as to not make any loud, sudden noises.
                 You and your crew would usually stalk the area when darkness fell, lurking on any sleeping animals. You notice
                 a small <strong>CAVE</strong> in the distance and what seems to be smoke billowing from a nearby <strong>CAMPFIRE</strong>.`},
             'examine twigs': { output: `Dry <strong>TWIGS</strong> cover the ground.`,
@@ -88,10 +88,11 @@ const gameData = {
         You can see smoke coming from the <strong>CAMPFIRE</strong> in the distance.`,
         commands: {
             'look': { output: `There's a sleeping tiger in the cave.`},
-            'examine tiger': { output: `Despite the dark, you can see the tiger's body moving up and down with each breath. You can still recall the day
-                you hunted your first and only one down. The softness of its fur and the weight of its body as you and your friends carried it back to the village; 
-                the whole village had a celebatory feast that night. The last roar of a mighty beast. You look down at your wrinkled hands and feel a pang of guilt. 
-                You let the tiger sleep.`},
+            'examine tiger': { output: `Despite the dark, you can see the tiger's body moving up and down with each heavy breath. You can still recall the day
+                you hunted your first and only one down. You remember the tough muscle underneath its soft fur and the weight of its lifeless body as you and your friends carried it back to the village; 
+                the whole village held a celebatory feast that night. Catching, let alone hunting, a tiger only occurs once in a blue moon. 
+                You remember the last roar of the mighty beast. You look down at your wrinkled hands and can't describe the feeling that washes over you. 
+                You let the tiger sleep. (Hint: Type 'go to campfire')`},
             'go to campfire': { nextRoom: 'camp', output: `You walk over to the campfire.`,
                 action: function () {
                   document.getElementById('topimg').src="art/smallfire.png";
