@@ -92,7 +92,7 @@ const gameData = {
                 you hunted your first and only one down. You remember the tough muscle underneath its soft fur and the weight of its lifeless body as you and your friends carried it back to the village; 
                 the whole village held a celebatory feast that night. Catching, let alone hunting, a tiger only occurs once in a blue moon. 
                 You remember the last roar of the mighty beast. You look down at your wrinkled hands and can't describe the feeling that washes over you. 
-                You let the tiger sleep. (Hint: Type 'go to campfire')`},
+                You let the tiger sleep. <i>You should check out the campfire instead.</i> (Hint: Type 'go to campfire')`},
             'go to campfire': { nextRoom: 'camp', output: `You walk over to the campfire.`,
                 action: function () {
                   document.getElementById('topimg').src="art/smallfire.png";
