@@ -81,7 +81,7 @@ const gameData = {
                     }, 0);
                 }
             },
-            'help': { output: `VALID COMMANDS: look, examine corridor, examine windows, examine [?]`,
+            'help': { output: `VALID COMMANDS: look, examine corridor, examine windows`,
                 action: function () {
                     setTimeout(() => {
                         document.querySelectorAll('#textoutput span').forEach(span => {
