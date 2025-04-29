@@ -38,7 +38,7 @@ const gameData = {
         description: `Empty hospital beds line the hallway. The most recent patient was discharged earlier that afternoon. 
         You wonder where the nightshift nurses are...and who rang you. It's eerily quiet other than the ticking of
         the clock and crickets outside. You notice one of the <span style="font-weight: bold;"> WINDOWS </span> was left open.
-        The shutters noisly hit against the side of the wall from the strong winds outside.`,
+        The shutters noisly hit against the side of the wall from the strong winds outside. <i>You should examine the windows.</i>`,
         commands: {
             'look': { output: `Empty hospital beds line the corridor. One of the<span style="font-weight: bold;"> WINDOWS </span> is open.`,
                 action: function () {
